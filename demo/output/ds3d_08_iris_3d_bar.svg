@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny" viewBox ="0 0 1200 800">
+<title>pyqtgraph SVG export</title>
+<desc>Generated with Qt and pyqtgraph</desc>
+<style>
+    image {
+        image-rendering: crisp-edges;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+    }
+</style>
+<rect width="100%" height="100%" fill="#ffffff" fill-opacity="1.0" />
+<defs>
+</defs>
+<g id="GraphicsScene_1">
+    <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="GraphicsLayout_1">
+        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotItem_1">
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="ViewBox_1">
+                <g fill="none" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M45.0,10.0 L630.5,10.0 L630.5,450.5 L45.0,450.5 L45.0,10.0 "/>
+                </g>
+                <clipPath id="ViewBox_1_clip">
+                    <path vector-effect="none" fill-rule="evenodd" d="M45.0,10.0 L630.5,10.0 L630.5,450.5 L45.0,450.5 L45.0,10.0 " stroke-width="1.0"/>
+                </clipPath>
+                <g clip-path="url(#ViewBox_1_clip)">
+                    <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="ChildGroup_1">
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_1">
+                            <g fill="#1f77b4" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M121.372,201.307 L142.9848,201.307 L153.7912,189.82989999999998 L132.1784,189.82989999999998 L132.1784,316.078 L153.7912,316.078 L142.9848,316.078 L121.372,316.078 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_2">
+                            <g fill="#1f77b4" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M121.372,287.48854389999997 L142.9848,287.48854389999997 L142.9848,201.307 L121.372,201.307 L121.372,402.2595439 L142.9848,402.2595439 L121.372,402.2595439 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_3">
+                            <g fill="#1f77b4" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M229.43599999999998,201.307 L251.04879999999997,201.307 L261.85519999999997,189.82989999999998 L240.2424,189.82989999999998 L240.2424,316.078 L261.85519999999997,316.078 L251.04879999999997,316.078 L229.43599999999998,316.078 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_4">
+                            <g fill="#1f77b4" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M229.43599999999998,260.3222482 L251.04879999999997,260.3222482 L251.04879999999997,201.307 L229.43599999999998,201.307 L229.43599999999998,375.09324819999995 L251.04879999999997,375.09324819999995 L229.43599999999998,375.09324819999995 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_5">
+                            <g fill="#1f77b4" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M337.5,201.307 L359.1128,201.307 L369.9192,189.82989999999998 L348.3064,189.82989999999998 L348.3064,316.078 L369.9192,316.078 L359.1128,316.078 L337.5,316.078 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_6">
+                            <g fill="#1f77b4" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M337.5,226.47628029999998 L359.1128,226.47628029999998 L359.1128,201.307 L337.5,201.307 L337.5,341.2472803 L359.1128,341.2472803 L337.5,341.2472803 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_7">
+                            <g fill="#1f77b4" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M445.564,201.307 L467.1768,201.307 L477.98319999999995,189.82989999999998 L456.3704,189.82989999999998 L456.3704,316.078 L477.98319999999995,316.078 L467.1768,316.078 L445.564,316.078 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_8">
+                            <g fill="#1f77b4" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M445.564,205.5420499 L467.1768,205.5420499 L467.1768,201.307 L445.564,201.307 L445.564,320.3130499 L467.1768,320.3130499 L445.564,320.3130499 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_9">
+                            <g fill="#ff7f0e" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M148.388,143.92149999999998 L170.0008,143.92149999999998 L180.8072,132.44439999999997 L159.1944,132.44439999999997 L159.1944,258.6925 L180.8072,258.6925 L170.0008,258.6925 L148.388,258.6925 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_10">
+                            <g fill="#ff7f0e" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M148.388,246.1135984 L170.0008,246.1135984 L170.0008,143.92149999999998 L148.388,143.92149999999998 L148.388,360.88459839999996 L170.0008,360.88459839999996 L148.388,360.88459839999996 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_11">
+                            <g fill="#ff7f0e" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M256.452,143.92149999999998 L278.0648,143.92149999999998 L288.8712,132.44439999999997 L267.2584,132.44439999999997 L267.2584,258.6925 L288.8712,258.6925 L278.0648,258.6925 L256.452,258.6925 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_12">
+                            <g fill="#ff7f0e" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M256.452,191.6088505 L278.0648,191.6088505 L278.0648,143.92149999999998 L256.452,143.92149999999998 L256.452,306.3798505 L278.0648,306.3798505 L256.452,306.3798505 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_13">
+                            <g fill="#ff7f0e" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M364.51599999999996,143.92149999999998 L386.1288,143.92149999999998 L396.93519999999995,132.44439999999997 L375.3224,132.44439999999997 L375.3224,258.6925 L396.93519999999995,258.6925 L386.1288,258.6925 L364.51599999999996,258.6925 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_14">
+                            <g fill="#ff7f0e" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M364.51599999999996,217.260169 L386.1288,217.260169 L386.1288,143.92149999999998 L364.51599999999996,143.92149999999998 L364.51599999999996,332.031169 L386.1288,332.031169 L364.51599999999996,332.031169 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_15">
+                            <g fill="#ff7f0e" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M472.58,143.92149999999998 L494.19280000000003,143.92149999999998 L504.9992,132.44439999999997 L483.3864,132.44439999999997 L483.3864,258.6925 L504.9992,258.6925 L494.19280000000003,258.6925 L472.58,258.6925 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_16">
+                            <g fill="#ff7f0e" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M472.58,166.7494519 L494.19280000000003,166.7494519 L494.19280000000003,143.92149999999998 L472.58,143.92149999999998 L472.58,281.5204519 L494.19280000000003,281.5204519 L472.58,281.5204519 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_17">
+                            <g fill="#2ca02c" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M175.404,86.53599999999999 L197.0168,86.53599999999999 L207.82319999999999,75.05889999999998 L186.2104,75.05889999999998 L186.2104,201.307 L207.82319999999999,201.307 L197.0168,201.307 L175.404,201.307 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_18">
+                            <g fill="#2ca02c" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M175.404,199.95270219999998 L197.0168,199.95270219999998 L197.0168,86.53599999999999 L175.404,86.53599999999999 L175.404,314.7237022 L197.0168,314.7237022 L175.404,314.7237022 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_19">
+                            <g fill="#2ca02c" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M283.468,86.53599999999999 L305.0808,86.53599999999999 L315.8872,75.05889999999998 L294.2744,75.05889999999998 L294.2744,201.307 L315.8872,201.307 L305.0808,201.307 L283.468,201.307 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_20">
+                            <g fill="#2ca02c" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M283.468,137.7353431 L305.0808,137.7353431 L305.0808,86.53599999999999 L283.468,86.53599999999999 L283.468,252.50634309999998 L305.0808,252.50634309999998 L283.468,252.50634309999998 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_21">
+                            <g fill="#2ca02c" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M391.532,86.53599999999999 L413.14480000000003,86.53599999999999 L423.9512,75.05889999999998 L402.3384,75.05889999999998 L402.3384,201.307 L423.9512,201.307 L413.14480000000003,201.307 L391.532,201.307 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_22">
+                            <g fill="#2ca02c" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M391.532,182.11728879999998 L413.14480000000003,182.11728879999998 L413.14480000000003,86.53599999999999 L391.532,86.53599999999999 L391.532,296.8882888 L413.14480000000003,296.8882888 L391.532,296.8882888 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_23">
+                            <g fill="#2ca02c" fill-opacity="0.898039" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M499.596,86.53599999999999 L521.2088,86.53599999999999 L532.0151999999999,75.05889999999998 L510.4024,75.05889999999998 L510.4024,201.307 L532.0151999999999,201.307 L521.2088,201.307 L499.596,201.307 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_24">
+                            <g fill="#2ca02c" fill-opacity="0.6" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M499.596,121.41490689999998 L521.2088,121.41490689999998 L521.2088,86.53599999999999 L499.596,86.53599999999999 L499.596,236.1859069 L521.2088,236.1859069 L499.596,236.1859069 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_1">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_1">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M121.372,201.307 L142.9848,201.307 L153.7912,189.82989999999998 L132.1784,189.82989999999998 L121.372,201.307 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_2">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_2">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M121.372,287.48854389999997 L142.9848,287.48854389999997 L142.9848,201.307 L121.372,201.307 L121.372,287.48854389999997 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_3">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_3">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M229.43599999999998,201.307 L251.04879999999997,201.307 L261.85519999999997,189.82989999999998 L240.2424,189.82989999999998 L229.43599999999998,201.307 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_4">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_4">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M229.43599999999998,260.3222482 L251.04879999999997,260.3222482 L251.04879999999997,201.307 L229.43599999999998,201.307 L229.43599999999998,260.3222482 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_5">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_5">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M337.5,201.307 L359.1128,201.307 L369.9192,189.82989999999998 L348.3064,189.82989999999998 L337.5,201.307 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_6">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_6">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M337.5,226.47628029999998 L359.1128,226.47628029999998 L359.1128,201.307 L337.5,201.307 L337.5,226.47628029999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_7">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_7">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M445.564,201.307 L467.1768,201.307 L477.98319999999995,189.82989999999998 L456.3704,189.82989999999998 L445.564,201.307 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_8">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_8">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M445.564,205.5420499 L467.1768,205.5420499 L467.1768,201.307 L445.564,201.307 L445.564,205.5420499 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_9">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_9">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M148.388,143.92149999999998 L170.0008,143.92149999999998 L180.8072,132.44439999999997 L159.1944,132.44439999999997 L148.388,143.92149999999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_10">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_10">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M148.388,246.1135984 L170.0008,246.1135984 L170.0008,143.92149999999998 L148.388,143.92149999999998 L148.388,246.1135984 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_11">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_11">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M256.452,143.92149999999998 L278.0648,143.92149999999998 L288.8712,132.44439999999997 L267.2584,132.44439999999997 L256.452,143.92149999999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_12">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_12">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M256.452,191.6088505 L278.0648,191.6088505 L278.0648,143.92149999999998 L256.452,143.92149999999998 L256.452,191.6088505 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_13">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_13">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M364.51599999999996,143.92149999999998 L386.1288,143.92149999999998 L396.93519999999995,132.44439999999997 L375.3224,132.44439999999997 L364.51599999999996,143.92149999999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_14">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_14">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M364.51599999999996,217.260169 L386.1288,217.260169 L386.1288,143.92149999999998 L364.51599999999996,143.92149999999998 L364.51599999999996,217.260169 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_15">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_15">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M472.58,143.92149999999998 L494.19280000000003,143.92149999999998 L504.9992,132.44439999999997 L483.3864,132.44439999999997 L472.58,143.92149999999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_16">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_16">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M472.58,166.7494519 L494.19280000000003,166.7494519 L494.19280000000003,143.92149999999998 L472.58,143.92149999999998 L472.58,166.7494519 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_17">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_17">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M175.404,86.53599999999999 L197.0168,86.53599999999999 L207.82319999999999,75.05889999999998 L186.2104,75.05889999999998 L175.404,86.53599999999999 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_18">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_18">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M175.404,199.95270219999998 L197.0168,199.95270219999998 L197.0168,86.53599999999999 L175.404,86.53599999999999 L175.404,199.95270219999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_19">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_19">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M283.468,86.53599999999999 L305.0808,86.53599999999999 L315.8872,75.05889999999998 L294.2744,75.05889999999998 L283.468,86.53599999999999 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_20">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_20">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M283.468,137.7353431 L305.0808,137.7353431 L305.0808,86.53599999999999 L283.468,86.53599999999999 L283.468,137.7353431 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_21">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_21">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M391.532,86.53599999999999 L413.14480000000003,86.53599999999999 L423.9512,75.05889999999998 L402.3384,75.05889999999998 L391.532,86.53599999999999 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_22">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_22">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M391.532,182.11728879999998 L413.14480000000003,182.11728879999998 L413.14480000000003,86.53599999999999 L391.532,86.53599999999999 L391.532,182.11728879999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_23">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_23">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M499.596,86.53599999999999 L521.2088,86.53599999999999 L532.0151999999999,75.05889999999998 L510.4024,75.05889999999998 L499.596,86.53599999999999 "/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_24">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_24">
+                                <g fill="none" stroke="#ffffff" stroke-opacity="1" stroke-width="0.3" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M499.596,121.41490689999998 L521.2088,121.41490689999998 L521.2088,86.53599999999999 L499.596,86.53599999999999 L499.596,121.41490689999998 "/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsRectItem_1">
+                        <g fill="none" stroke="none" transform="matrix(1,0,0,1,45,10)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                            <rect vector-effect="non-scaling-stroke" x="0" y="0" width="585" height="440"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="LabelItem_1">
+                <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_1">
+                    
+
+
+                    
+
+
+                    
+
+
+                    <g fill="none" stroke="#969696" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,187.969,-3)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                        <text fill="#969696" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="18.5" font-family="&quot;Sans Serif&quot;" font-size="14.6667" font-weight="400" font-style="normal">Iris — 3D Bar Chart (Mean Feature Values)</text>
+                    </g>
+                    
+
+
+                    
+
+                </g>
+            </g>
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="AxisItem_1">
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="44.0,451.0 631.0,451.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="161.89600000000002,450.0 161.89600000000002,445.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="269.96000000000004,450.0 269.96000000000004,445.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="378.024,450.0 378.024,445.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="486.088,450.0 486.088,445.0"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,450)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="65.6719" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">sepal length (cm)</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="176.141" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">sepal width (cm)</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="282.813" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">petal length (cm)</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="393.281" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">petal width (cm)</text>
+                </g>
+            </g>
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="AxisItem_2">
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="44.0,9.0 44.0,451.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,430.85 50.0,430.85"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,316.078 50.0,316.078"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,201.307 50.0,201.307"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,86.5359 50.0,86.5359"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="0.498039" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,373.464 48.3333,373.464"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,258.693 48.3333,258.693"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,143.922 48.3333,143.922"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,29.1503 48.3333,29.1503"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="0.333333" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,442.327 47.5,442.327"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,419.373 47.5,419.373"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,407.895 47.5,407.895"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,396.418 47.5,396.418"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,384.941 47.5,384.941"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,361.987 47.5,361.987"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,350.51 47.5,350.51"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,339.033 47.5,339.033"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,327.556 47.5,327.556"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,304.601 47.5,304.601"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,293.124 47.5,293.124"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,281.647 47.5,281.647"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,270.17 47.5,270.17"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,247.216 47.5,247.216"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,235.739 47.5,235.739"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,224.261 47.5,224.261"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,212.784 47.5,212.784"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,189.83 47.5,189.83"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,178.353 47.5,178.353"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,166.876 47.5,166.876"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,155.399 47.5,155.399"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,132.44400000000002 47.5,132.44400000000002"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,120.967 47.5,120.967"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,109.4902 47.5,109.4902"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,98.013 47.5,98.013"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,75.0588 47.5,75.0588"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,63.5817 47.5,63.5817"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,52.1045 47.5,52.1045"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,40.6274 47.5,40.6274"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,17.67314 47.5,17.67314"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,10,10)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="16.6719" y="424.969" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">-2</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="18.6875" y="310.203" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">-1</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="22.2344" y="195.422" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">0</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="24.2188" y="80.6563" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">1</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="7.45313" y="367.578" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">-1.5</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="5.0625" y="252.813" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">-0.5</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="10.9375" y="138.031" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">0.5</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="12.9844" y="23.2656" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">1.5</text>
+                </g>
+                <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_2">
+                    
+
+
+                    
+
+
+                    
+
+
+                    <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-1,1,0,5,234)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                        <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="15.5938" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">Mean Value </text>
+                    </g>
+                    
+
+
+                    
+
+                </g>
+            </g>
+        </g>
+        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsRectItem_2">
+            <g fill="none" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                <rect vector-effect="non-scaling-stroke" x="0" y="0" width="0" height="0"/>
+            </g>
+        </g>
+    </g>
+</g>
+
+</svg>

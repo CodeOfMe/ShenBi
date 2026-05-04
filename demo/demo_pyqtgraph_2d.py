@@ -442,15 +442,19 @@ features = [iris.data.shape[1], wine.data.shape[1], cancer.data.shape[1],
             digits.data.shape[1], diabetes.data.shape[1]]
 classes = [len(iris.target_names), len(wine.target_names),
            len(cancer.target_names), 10, 1]
+x_pos = range(len(datasets))
 
 fig, axes = plt.subplots(1, 3, figsize=(16, 5))
-axes[0].bar(datasets, sizes, color='#1f77b4', edgecolor='white', linewidth=0.5)
+axes[0].bar(x_pos, sizes, color='#1f77b4', edgecolor='white', linewidth=0.5)
+axes[0].set_xticks(x_pos); axes[0].set_xticklabels(datasets)
 axes[0].set_title('Sample Size')
 axes[0].set_ylabel('Number of Samples')
-axes[1].bar(datasets, features, color='#2ca02c', edgecolor='white', linewidth=0.5)
+axes[1].bar(x_pos, features, color='#2ca02c', edgecolor='white', linewidth=0.5)
+axes[1].set_xticks(x_pos); axes[1].set_xticklabels(datasets)
 axes[1].set_title('Number of Features')
 axes[1].set_ylabel('Features')
-axes[2].bar(datasets, classes, color='#d62728', edgecolor='white', linewidth=0.5)
+axes[2].bar(x_pos, classes, color='#d62728', edgecolor='white', linewidth=0.5)
+axes[2].set_xticks(x_pos); axes[2].set_xticklabels(datasets)
 axes[2].set_title('Number of Classes')
 axes[2].set_ylabel('Classes')
 plt.suptitle('Dataset Overview Comparison')

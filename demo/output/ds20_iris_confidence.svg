@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny" viewBox ="0 0 1000 600">
+<title>pyqtgraph SVG export</title>
+<desc>Generated with Qt and pyqtgraph</desc>
+<style>
+    image {
+        image-rendering: crisp-edges;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+    }
+</style>
+<rect width="100%" height="100%" fill="#ffffff" fill-opacity="1.0" />
+<defs>
+</defs>
+<g id="GraphicsScene_1">
+    <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="GraphicsLayout_1">
+        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotItem_1">
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="ViewBox_1">
+                <g fill="none" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M45.0,10.0 L630.5,10.0 L630.5,450.5 L45.0,450.5 L45.0,10.0 "/>
+                </g>
+                <clipPath id="ViewBox_1_clip">
+                    <path vector-effect="none" fill-rule="evenodd" d="M45.0,10.0 L630.5,10.0 L630.5,450.5 L45.0,450.5 L45.0,10.0 " stroke-width="1.0"/>
+                </clipPath>
+                <g clip-path="url(#ViewBox_1_clip)">
+                    <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="ChildGroup_1">
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_1">
+                            <g fill="#1f77b4" fill-opacity="0.14902" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M68.31580000000001,414.8476932224 L77.44069000000002,430.84929482255995 L86.56558000000001,414.8476932224 L86.56558000000001,414.8476932224 L95.69047000000002,382.844429216 L95.69047000000002,414.8476932224 L95.69047000000002,414.8476932224 L95.69047000000002,398.846029216 L95.69047000000002,398.846029216 L95.69047000000002,414.8476932224 L95.69047000000002,414.8476932224 L104.81536,414.8476932224 L104.81536,414.8476932224 L104.81536,398.846029216 L104.81536,414.8476932224 L104.81536,414.8476932224 L104.81536,430.84929482255995 L104.81536,414.8476932224 L104.81536,414.8476932224 L104.81536,414.8476932224 L104.81536,398.846029216 L104.81536,398.846029216 L104.81536,414.8476932224 L104.81536,430.84929482255995 L113.94025000000002,414.8476932224 L113.94025000000002,414.8476932224 L113.94025000000002,430.84929482255995 L113.94025000000002,382.844429216 L113.94025000000002,414.8476932224 L113.94025000000002,414.8476932224 L113.94025000000002,414.8476932224 L113.94025000000002,414.8476932224 L113.94025000000002,414.8476932224 L113.94025000000002,382.844429216 L113.94025000000002,382.844429216 L113.94025000000002,398.846029216 L113.94025000000002,430.84929482255995 L123.06514000000001,414.8476932224 L123.06514000000001,414.8476932224 L123.06514000000001,382.844429216 L123.06514000000001,414.8476932224 L123.06514000000001,414.8476932224 L123.06514000000001,414.8476932224 L123.06514000000001,350.841229216 L132.19003,398.846029216 L132.19003,382.844429216 L132.19003,366.842829216 L132.19003,414.8476932224 L150.43981,382.844429216 L150.43981,414.8476932224 L150.43981,381.459970784 L150.43981,349.456770784 L132.19003,381.459970784 L132.19003,333.45517078399996 L132.19003,349.456770784 L132.19003,365.45837078399995 L123.06514000000001,317.453570784 L123.06514000000001,381.459970784 L123.06514000000001,349.456770784 L123.06514000000001,381.459970784 L113.94025000000002,397.461570784 L113.94025000000002,365.45837078399995 L113.94025000000002,349.456770784 L113.94025000000002,381.459970784 L113.94025000000002,349.456770784 L113.94025000000002,397.461570784 L113.94025000000002,381.459970784 L104.81536,397.461570784 L104.81536,381.459970784 L104.81536,365.45837078399995 L104.81536,381.459970784 L104.81536,397.461570784 L104.81536,381.459970784 L104.81536,365.45837078399995 L104.81536,381.459970784 L95.69047000000002,381.459970784 L95.69047000000002,365.45837078399995 L95.69047000000002,381.459970784 L95.69047000000002,349.456770784 L86.56558000000001,381.459970784 L77.44069000000002,397.461570784 L68.31580000000001,381.459970784 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_2">
+                            <g fill="#ff7f0e" fill-opacity="0.14902" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M250.81360000000004,285.46493224 L278.18827,301.46653224 L278.18827,301.46653224 L296.43805,301.46653224 L296.43805,301.46653224 L305.56294,253.46253231999998 L314.68783,301.46653224 L323.81271999999996,285.46493224 L332.93761,237.46093232 L332.93761,269.46413232 L332.93761,285.46493224 L342.0625,253.46253231999998 L342.0625,301.46653224 L342.0625,253.46253231999998 L342.0625,253.46253231999998 L342.0625,269.46413232 L351.18739,301.46653224 L351.18739,253.46253231999998 L351.18739,253.46253231999998 L360.31228000000004,253.46253231999998 L360.31228000000004,269.46413232 L360.31228000000004,253.46253231999998 L360.31228000000004,221.45933232 L369.43717,253.46253231999998 L369.43717,253.46253231999998 L378.56206000000003,237.46093232 L378.56206000000003,269.46413232 L378.56206000000003,237.46093232 L378.56206000000003,253.46253231999998 L387.68695,221.45933232 L387.68695,221.45933232 L387.68695,221.45933232 L387.68695,221.45933232 L387.68695,205.45773232 L387.68695,253.46253231999998 L387.68695,221.45933232 L396.81183999999996,221.45933232 L396.81183999999996,253.46253231999998 L396.81183999999996,237.46093232 L405.93673,237.46093232 L405.93673,205.45773232 L405.93673,237.46093232 L405.93673,269.46413232 L405.93673,221.45933232 L415.06162,173.45453232 L415.06162,237.46093232 L424.18651000000006,221.45933232 L424.18651000000006,221.45933232 L433.3114,189.45613232 L442.43629,205.45773232 L442.43629,142.80506767999998 L433.3114,126.80346767999998 L424.18651000000006,158.80666767999998 L415.06162,174.80826768 L415.06162,110.80186767999999 L405.93673,158.80666767999998 L405.93673,206.81146768 L405.93673,174.80826768 L405.93673,142.80506767999998 L405.93673,174.80826768 L396.81183999999996,174.80826768 L396.81183999999996,190.80986768 L396.81183999999996,158.80666767999998 L387.68695,158.80666767999998 L387.68695,190.80986768 L387.68695,142.80506767999998 L387.68695,158.80666767999998 L378.56206000000003,190.80986768 L378.56206000000003,174.80826768 L378.56206000000003,206.81146768 L378.56206000000003,174.80826768 L369.43717,190.80986768 L360.31228000000004,158.80666767999998 L360.31228000000004,190.80986768 L360.31228000000004,206.81146768 L360.31228000000004,190.80986768 L351.18739,190.80986768 L351.18739,238.81466767999999 L342.0625,206.81146768 L342.0625,190.80986768 L342.0625,238.81466767999999 L342.0625,190.80986768 L332.93761,222.81306768 L332.93761,206.81146768 L332.93761,174.80826768 L323.81271999999996,222.81306768 L314.68783,238.81466767999999 L305.56294,190.80986768 L296.43805,238.81466767999999 L278.18827,238.81466767999999 L250.81360000000004,222.81306768 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="FillBetweenItem_3">
+                            <g fill="#2ca02c" fill-opacity="0.14902" stroke="none" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M387.68695,201.63655024 L415.06162,185.63495024 L415.06162,185.63495024 L424.18651000000006,185.63495024 L424.18651000000006,153.63175023999997 L424.18651000000006,185.63495024 L433.3114,233.63975023999998 L433.3114,169.63335024000003 L433.3114,153.63175023999997 L442.43629,233.63975023999998 L442.43629,89.62535023999999 L442.43629,185.63495024 L442.43629,105.62695024000004 L442.43629,169.63335024000003 L442.43629,153.63175023999997 L442.43629,169.63335024000003 L451.56118000000004,105.62695024000004 L451.56118000000004,153.63175023999997 L460.68607,105.62695024000004 L460.68607,169.63335024000003 L469.81096,105.62695024000004 L469.81096,137.63015024000003 L478.93585,185.63495024 L478.93585,137.63015024000003 L478.93585,185.63495024 L488.06073999999995,89.62535023999999 L488.06073999999995,89.62535023999999 L488.06073999999995,185.63495024 L488.06073999999995,137.63015024000003 L488.06073999999995,249.64135024 L488.06073999999995,121.62855023999998 L497.18563,73.62375023999999 L497.18563,137.63015024000003 L497.18563,105.62695024000004 L506.31051999999994,217.63815024000002 L506.31051999999994,121.62855023999998 L506.31051999999994,185.63495024 L515.43541,137.63015024000003 L515.43541,105.62695024000004 L524.5603000000001,73.62375023999999 L524.5603000000001,185.63495024 L533.68519,169.63335024000003 L533.68519,105.62695024000004 L533.68519,73.62375023999999 L551.93497,185.63495024 L561.0598600000001,153.63175023999997 L579.3096400000001,137.63015024000003 L588.4345300000001,121.62855023999998 L588.4345300000001,153.63175023999997 L606.6843100000001,105.62695024000004 L606.6843100000001,18.613449760000037 L588.4345300000001,66.61824976000003 L588.4345300000001,34.61504975999998 L579.3096400000001,50.61664975999997 L561.0598600000001,66.61824976000003 L551.93497,98.62144976000002 L533.68519,-13.389750240000012 L533.68519,18.613449760000037 L533.68519,82.61984976000002 L524.5603000000001,98.62144976000002 L524.5603000000001,-13.389750240000012 L515.43541,18.613449760000037 L515.43541,50.61664975999997 L506.31051999999994,98.62144976000002 L506.31051999999994,34.61504975999998 L506.31051999999994,130.62464976 L497.18563,18.613449760000037 L497.18563,50.61664975999997 L497.18563,-13.389750240000012 L488.06073999999995,34.61504975999998 L488.06073999999995,162.62784976 L488.06073999999995,50.61664975999997 L488.06073999999995,98.62144976000002 L488.06073999999995,2.611849760000041 L478.93585,98.62144976000002 L478.93585,50.61664975999997 L478.93585,98.62144976000002 L469.81096,50.61664975999997 L469.81096,18.613449760000037 L460.68607,82.61984976000002 L460.68607,18.613449760000037 L451.56118000000004,66.61824976000003 L451.56118000000004,18.613449760000037 L442.43629,82.61984976000002 L442.43629,66.61824976000003 L442.43629,82.61984976000002 L442.43629,18.613449760000037 L442.43629,98.62144976000002 L442.43629,2.611849760000041 L442.43629,146.62624976 L433.3114,66.61824976000003 L433.3114,82.61984976000002 L433.3114,146.62624976 L424.18651000000006,98.62144976000002 L424.18651000000006,66.61824976000003 L424.18651000000006,98.62144976000002 L415.06162,98.62144976000002 L387.68695,114.62304976000001 "/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_1">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_1">
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="68.31580000000001,398.1538 77.44069000000002,414.1554"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="77.44069000000002,414.1554 86.56558000000001,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="85.8155" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="86.56558000000001,398.1538 95.69047000000002,366.1506"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="95.69047000000002,366.1506 95.69047000000002,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="94.9404" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="95.69047000000002,398.1538 95.69047000000002,382.1522"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="94.9404" y="381.403" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="95.69047000000002,382.1522 95.69047000000002,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="94.9404" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="95.69047000000002,398.1538 104.81536,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="104.065" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,398.1538 104.81536,382.1522"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,382.1522 104.81536,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="104.065" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,398.1538 104.81536,414.1554"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,414.1554 104.81536,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="104.065" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                
+
+
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="104.065" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,398.1538 104.81536,382.1522"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="104.065" y="381.403" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,382.1522 104.81536,398.1538"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,398.1538 104.81536,414.1554"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81536,414.1554 113.94025000000002,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="113.19" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="113.94025000000002,398.1538 113.94025000000002,414.1554"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="113.94025000000002,414.1554 113.94025000000002,366.1506"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="113.94025000000002,366.1506 113.94025000000002,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="113.19" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                
+
+
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="113.19" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                
+
+
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="113.19" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                
+
+
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="113.19" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="113.94025000000002,398.1538 113.94025000000002,366.1506"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="113.19" y="365.401" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="113.94025000000002,366.1506 113.94025000000002,382.1522"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="113.94025000000002,382.1522 113.94025000000002,414.1554"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="113.94025000000002,414.1554 123.06514000000001,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="122.315" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="123.06514000000001,398.1538 123.06514000000001,366.1506"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="123.06514000000001,366.1506 123.06514000000001,398.1538"/>
+                                </g>
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="122.315" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                
+
+
+                                <g fill="#1f77b4" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="122.315" y="397.404" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="123.06514000000001,398.1538 123.06514000000001,334.1474"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="123.06514000000001,334.1474 132.19003,382.1522"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="132.19003,382.1522 132.19003,366.1506"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="132.19003,366.1506 132.19003,350.149"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="132.19003,350.149 132.19003,398.1538"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="132.19003,398.1538 150.43981,366.1506"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="150.43981,366.1506 150.43981,398.1538"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_2">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_2">
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="250.81360000000004,254.13939999999997 278.18827,270.14099999999996"/>
+                                </g>
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="277.438" y="269.391" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="278.18827,270.14099999999996 296.43805,270.14099999999996"/>
+                                </g>
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="295.688" y="269.391" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="296.43805,270.14099999999996 305.56294,222.13619999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="305.56294,222.13619999999997 314.68783,270.14099999999996"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="314.68783,270.14099999999996 323.81271999999996,254.13939999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="323.81271999999996,254.13939999999997 332.93761,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="332.93761,206.1346 332.93761,238.1378"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="332.93761,238.1378 332.93761,254.13939999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="332.93761,254.13939999999997 342.0625,222.13619999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="342.0625,222.13619999999997 342.0625,270.14099999999996"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="342.0625,270.14099999999996 342.0625,222.13619999999997"/>
+                                </g>
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="341.312" y="221.386" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="342.0625,222.13619999999997 342.0625,238.1378"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="342.0625,238.1378 351.18739,270.14099999999996"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="351.18739,270.14099999999996 351.18739,222.13619999999997"/>
+                                </g>
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="350.437" y="221.386" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="351.18739,222.13619999999997 360.31228000000004,222.13619999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="360.31228000000004,222.13619999999997 360.31228000000004,238.1378"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="360.31228000000004,238.1378 360.31228000000004,222.13619999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="360.31228000000004,222.13619999999997 360.31228000000004,190.13299999999998"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="360.31228000000004,190.13299999999998 369.43717,222.13619999999997"/>
+                                </g>
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="368.687" y="221.386" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="369.43717,222.13619999999997 378.56206000000003,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="378.56206000000003,206.1346 378.56206000000003,238.1378"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="378.56206000000003,238.1378 378.56206000000003,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="378.56206000000003,206.1346 378.56206000000003,222.13619999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="378.56206000000003,222.13619999999997 387.68695,190.13299999999998"/>
+                                </g>
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="386.937" y="189.383" width="1.5" height="1.5"/>
+                                </g>
+                                
+
+
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="386.937" y="189.383" width="1.5" height="1.5"/>
+                                </g>
+                                
+
+
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="386.937" y="189.383" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="387.68695,190.13299999999998 387.68695,174.13139999999999"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="387.68695,174.13139999999999 387.68695,222.13619999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="387.68695,222.13619999999997 387.68695,190.13299999999998"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="387.68695,190.13299999999998 396.81183999999996,190.13299999999998"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="396.81183999999996,190.13299999999998 396.81183999999996,222.13619999999997"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="396.81183999999996,222.13619999999997 396.81183999999996,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="396.81183999999996,206.1346 405.93673,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="405.93673,206.1346 405.93673,174.13139999999999"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="405.93673,174.13139999999999 405.93673,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="405.93673,206.1346 405.93673,238.1378"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="405.93673,238.1378 405.93673,190.13299999999998"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="405.93673,190.13299999999998 415.06162,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="415.06162,142.1282 415.06162,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="415.06162,206.1346 424.18651000000006,190.13299999999998"/>
+                                </g>
+                                <g fill="#ff7f0e" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="423.436" y="189.383" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="424.18651000000006,190.13299999999998 433.3114,158.1298"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="433.3114,158.1298 442.43629,174.13139999999999"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotDataItem_3">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="PlotCurveItem_3">
+                                <g fill="none" stroke="#2ca02c" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="387.68695,158.1298 415.06162,142.1282"/>
+                                </g>
+                                <g fill="#2ca02c" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="414.312" y="141.378" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#2ca02c" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="415.06162,142.1282 424.18651000000006,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="424.18651000000006,142.1282 424.18651000000006,110.125"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="424.18651000000006,110.125 424.18651000000006,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="424.18651000000006,142.1282 433.3114,190.13299999999998"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="433.3114,190.13299999999998 433.3114,126.1266"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="433.3114,126.1266 433.3114,110.125"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="433.3114,110.125 442.43629,190.13299999999998"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="442.43629,190.13299999999998 442.43629,46.118600000000015"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="442.43629,46.118600000000015 442.43629,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="442.43629,142.1282 442.43629,62.12020000000001"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="442.43629,62.12020000000001 442.43629,126.1266"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="442.43629,126.1266 442.43629,110.125"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="442.43629,110.125 442.43629,126.1266"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="442.43629,126.1266 451.56118000000004,62.12020000000001"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="451.56118000000004,62.12020000000001 451.56118000000004,110.125"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="451.56118000000004,110.125 460.68607,62.12020000000001"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="460.68607,62.12020000000001 460.68607,126.1266"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="460.68607,126.1266 469.81096,62.12020000000001"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="469.81096,62.12020000000001 469.81096,94.1234"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="469.81096,94.1234 478.93585,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="478.93585,142.1282 478.93585,94.1234"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="478.93585,94.1234 478.93585,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="478.93585,142.1282 488.06073999999995,46.118600000000015"/>
+                                </g>
+                                <g fill="#2ca02c" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <rect x="487.311" y="45.368" width="1.5" height="1.5"/>
+                                </g>
+                                <g fill="none" stroke="#2ca02c" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="488.06073999999995,46.118600000000015 488.06073999999995,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="488.06073999999995,142.1282 488.06073999999995,94.1234"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="488.06073999999995,94.1234 488.06073999999995,206.1346"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="488.06073999999995,206.1346 488.06073999999995,78.12179999999995"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="488.06073999999995,78.12179999999995 497.18563,30.11700000000002"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="497.18563,30.11700000000002 497.18563,94.1234"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="497.18563,94.1234 497.18563,62.12020000000001"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="497.18563,62.12020000000001 506.31051999999994,174.13139999999999"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="506.31051999999994,174.13139999999999 506.31051999999994,78.12179999999995"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="506.31051999999994,78.12179999999995 506.31051999999994,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="506.31051999999994,142.1282 515.43541,94.1234"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="515.43541,94.1234 515.43541,62.12020000000001"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="515.43541,62.12020000000001 524.5603000000001,30.11700000000002"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="524.5603000000001,30.11700000000002 524.5603000000001,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="524.5603000000001,142.1282 533.68519,126.1266"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="533.68519,126.1266 533.68519,62.12020000000001"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="533.68519,62.12020000000001 533.68519,30.11700000000002"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="533.68519,30.11700000000002 551.93497,142.1282"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="551.93497,142.1282 561.0598600000001,110.125"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="561.0598600000001,110.125 579.3096400000001,94.1234"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="579.3096400000001,94.1234 588.4345300000001,78.12179999999995"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="588.4345300000001,78.12179999999995 588.4345300000001,110.125"/>
+                                    <polyline fill="none" vector-effect="non-scaling-stroke" points="588.4345300000001,110.125 606.6843100000001,62.12020000000001"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="LegendItem_1">
+                        <g fill="none" stroke="none" transform="matrix(1,0,0,1,75,40)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                            <rect vector-effect="non-scaling-stroke" x="0" y="0" width="108.547" height="87"/>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="ItemSample_1">
+                            <g fill="none" stroke="#1f77b4" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <polyline fill="none" vector-effect="non-scaling-stroke" points="84.0,61.5 104.0,61.5"/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="LabelItem_1">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_1">
+                                
+
+
+                                
+
+
+                                
+
+
+                                <g fill="none" stroke="#969696" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109,49)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <text fill="#969696" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="15.5938" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">setosa</text>
+                                </g>
+                                
+
+
+                                
+
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="ItemSample_2">
+                            <g fill="none" stroke="#ff7f0e" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <polyline fill="none" vector-effect="non-scaling-stroke" points="84.0,84.5 104.0,84.5"/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="LabelItem_2">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_2">
+                                
+
+
+                                
+
+
+                                
+
+
+                                <g fill="none" stroke="#969696" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109,72)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <text fill="#969696" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="15.5938" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">versicolor</text>
+                                </g>
+                                
+
+
+                                
+
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="ItemSample_3">
+                            <g fill="none" stroke="#2ca02c" stroke-opacity="1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                <polyline fill="none" vector-effect="non-scaling-stroke" points="84.0,107.5 104.0,107.5"/>
+                            </g>
+                        </g>
+                        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="LabelItem_3">
+                            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_3">
+                                
+
+
+                                
+
+
+                                
+
+
+                                <g fill="none" stroke="#969696" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,109,95)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                                    <text fill="#969696" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="15.5938" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">virginica</text>
+                                </g>
+                                
+
+
+                                
+
+                            </g>
+                        </g>
+                    </g>
+                    <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsRectItem_1">
+                        <g fill="none" stroke="none" transform="matrix(1,0,0,1,45,10)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                            <rect vector-effect="non-scaling-stroke" x="0" y="0" width="585" height="440"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="LabelItem_4">
+                <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_4">
+                    
+
+
+                    
+
+
+                    
+
+
+                    <g fill="none" stroke="#969696" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,154.906,-3)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                        <text fill="#969696" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="18.5" font-family="&quot;Sans Serif&quot;" font-size="14.6667" font-weight="400" font-style="normal">Iris — Petal Length vs Width with Confidence Bands</text>
+                    </g>
+                    
+
+
+                    
+
+                </g>
+            </g>
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="AxisItem_1">
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="44.0,451.0 631.0,451.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="159.565,450.0 159.565,445.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="342.062,450.0 342.062,445.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="524.56,450.0 524.56,445.0"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="0.498039" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="68.3158,450.0 68.3158,446.66667"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="250.814,450.0 250.814,446.66667"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="433.311,450.0 433.311,446.66667"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="615.809,450.0 615.809,446.66667"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="0.333333" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="50.065979999999996,450.0 50.065979999999996,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="86.5655,450.0 86.5655,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="104.81530000000001,450.0 104.81530000000001,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="123.0651,450.0 123.0651,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="141.3149,450.0 141.3149,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="177.814,450.0 177.814,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="196.064,450.0 196.064,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="214.314,450.0 214.314,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="232.564,450.0 232.564,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="269.063,450.0 269.063,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="287.313,450.0 287.313,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="305.563,450.0 305.563,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="323.813,450.0 323.813,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="360.312,450.0 360.312,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="378.562,450.0 378.562,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="396.812,450.0 396.812,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="415.062,450.0 415.062,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="451.561,450.0 451.561,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="469.811,450.0 469.811,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="488.061,450.0 488.061,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="506.31,450.0 506.31,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="542.81,450.0 542.81,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="561.06,450.0 561.06,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="579.31,450.0 579.31,447.5"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="597.559,450.0 597.559,447.5"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,45,450)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="110.828" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">2</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="293.078" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">4</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="475.625" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">6</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="20.4219" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">1</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="201.938" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">3</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="384.484" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">5</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="567.281" y="13.1875" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">7</text>
+                </g>
+                <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_5">
+                    
+
+
+                    
+
+
+                    
+
+
+                    <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,333,452)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                        <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="15.5938" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">petal length (cm) (cm) </text>
+                    </g>
+                    
+
+
+                    
+
+                </g>
+            </g>
+            <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="AxisItem_2">
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="44.0,9.0 44.0,451.0"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,430.157 50.0,430.157"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,270.141 50.0,270.141"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,110.125 50.0,110.125"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="0.498039" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,350.149 48.3333,350.149"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,190.133 48.3333,190.133"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,30.1164 48.3333,30.1164"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="0.333333" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,446.159 47.5,446.159"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,414.156 47.5,414.156"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,398.154 47.5,398.154"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,382.153 47.5,382.153"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,366.151 47.5,366.151"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,334.148 47.5,334.148"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,318.146 47.5,318.146"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,302.144 47.5,302.144"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,286.143 47.5,286.143"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,254.139 47.5,254.139"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,238.138 47.5,238.138"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,222.136 47.5,222.136"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,206.134 47.5,206.134"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,174.131 47.5,174.131"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,158.13 47.5,158.13"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,142.128 47.5,142.128"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,126.126 47.5,126.126"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,94.123 47.5,94.123"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,78.1213 47.5,78.1213"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,62.1197 47.5,62.1197"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,46.118 47.5,46.118"/>
+                    <polyline fill="none" vector-effect="non-scaling-stroke" points="45.0,14.11476 47.5,14.11476"/>
+                </g>
+                <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,10,10)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="22.2344" y="424.281" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">0</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="24.2188" y="264.266" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">1</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="22.5469" y="104.234" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">2</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="10.9375" y="344.266" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">0.5</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="12.9844" y="184.25" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">1.5</text>
+                    <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="11.0156" y="24.2344" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">2.5</text>
+                </g>
+                <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsTextItem_6">
+                    
+
+
+                    
+
+
+                    
+
+
+                    <g fill="none" stroke="#333333" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0,-1,1,0,5,234)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                        <text fill="#333333" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="15.5938" font-family="&quot;Sans Serif&quot;" font-size="12" font-weight="400" font-style="normal">petal width (cm) (cm) </text>
+                    </g>
+                    
+
+
+                    
+
+                </g>
+            </g>
+        </g>
+        <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" id="QGraphicsRectItem_2">
+            <g fill="none" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="12" font-weight="400" font-style="normal">
+                <rect vector-effect="non-scaling-stroke" x="0" y="0" width="0" height="0"/>
+            </g>
+        </g>
+    </g>
+</g>
+
+</svg>
