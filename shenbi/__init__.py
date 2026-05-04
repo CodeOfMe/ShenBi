@@ -23,10 +23,12 @@ from .line import ShenBiLine2D, ShenBiScatter
 from .colors import resolve_color
 from .utils import parse_format_string
 from .cm import cm, get_cmap, Colormap
+from . import mplot3d
 
 __version__ = "0.1.0"
 __all__ = [
     "pyplot",
+    "mplot3d",
     "ShenBiFigure",
     "ShenBiAxes",
     "ShenBiLine2D",

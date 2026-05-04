@@ -682,6 +682,37 @@ class ShenBiAxes:
             axis = self._plot_item.getAxis('left')
             axis.setTicks([tick_vals])
 
+    def set_xticklabels(self, labels: List[str], **kwargs) -> None:
+        """Set the x-axis tick labels, keeping current tick positions."""
+        try:
+            axis = self._plot_item.getAxis('bottom')
+            curr_ticks = axis.tickValues()
+            if curr_ticks and len(curr_ticks) > 0:
+                lengths = curr_ticks[0][1] if isinstance(curr_ticks[0], tuple) else []
+                positions = [float(t) for t in lengths] if lengths else list(range(len(labels)))
+            else:
+                positions = list(range(len(labels)))
+            tick_vals = [(float(p), str(l)) for p, l in zip(positions[:len(labels)], labels)]
+            axis = self._plot_item.getAxis('bottom')
+            axis.setTicks([tick_vals])
+        except Exception:
+            axis.setTicks([[(float(i), str(l)) for i, l in enumerate(labels)]])
+
+    def set_yticklabels(self, labels: List[str], **kwargs) -> None:
+        """Set the y-axis tick labels."""
+        try:
+            axis = self._plot_item.getAxis('left')
+            curr_ticks = axis.tickValues()
+            if curr_ticks and len(curr_ticks) > 0:
+                lengths = curr_ticks[0][1] if isinstance(curr_ticks[0], tuple) else []
+                positions = [float(t) for t in lengths] if lengths else list(range(len(labels)))
+            else:
+                positions = list(range(len(labels)))
+            tick_vals = [(float(p), str(l)) for p, l in zip(positions[:len(labels)], labels)]
+            axis.setTicks([tick_vals])
+        except Exception:
+            axis.setTicks([[(float(i), str(l)) for i, l in enumerate(labels)]])
+
     # ── Other Methods ─────────────────────────────────────────────────
 
     def step(self, x: Any, y: Any, *args: Any,
