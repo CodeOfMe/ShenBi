@@ -314,7 +314,7 @@ plt.figure(figsize=(10, 6))
 for digit in range(0, 10, 2):
     mask = digits_y == digit
     pixels = digits_data[mask].flatten()
-    plt.hist(pixels, bins=32, alpha=0.4, color=get_cmap('tab10')(digit/9, bytes=True),
+    plt.hist(pixels, bins=32, alpha=0.4, color=TAB10_COLORS[digit],
              edgecolor='white', linewidth=0.3, label=f'Digit {digit}')
 plt.title('Digits — Pixel Intensity Distribution (every other digit)')
 plt.xlabel('Pixel Value (0-16)')
