@@ -376,6 +376,88 @@ def hist(x: Any, bins: Optional[Any] = None,
     )
 
 
+def contour(X: Any, Y: Any, Z: Any,
+            levels: Optional[Any] = None,
+            colors: Optional[Any] = None,
+            linewidths: Optional[float] = None,
+            linestyles: Optional[str] = None,
+            alpha: Optional[float] = None,
+            **kwargs: Any) -> Any:
+    """Draw contour lines."""
+    return gca().contour(X, Y, Z, levels=levels, colors=colors,
+                         linewidths=linewidths, linestyles=linestyles,
+                         alpha=alpha, **kwargs)
+
+
+def contourf(X: Any, Y: Any, Z: Any,
+             levels: Optional[Any] = None,
+             cmap: Optional[Any] = None,
+             alpha: Optional[float] = None,
+             **kwargs: Any) -> Any:
+    """Draw filled contours."""
+    return gca().contourf(X, Y, Z, levels=levels, cmap=cmap,
+                          alpha=alpha, **kwargs)
+
+
+def colorbar(mappable: Optional[Any] = None,
+             cax: Optional[Any] = None,
+             ax: Optional[Any] = None,
+             **kwargs: Any) -> Any:
+    """Add a colorbar to the current axes."""
+    from pyqtgraph import ColorBarItem
+    if mappable is not None and hasattr(mappable, 'levels'):
+        cbar = ColorBarItem(values=(mappable.vmin, mappable.vmax),
+                           cmap=mappable.cmap if hasattr(mappable, 'cmap') else 'viridis')
+        return cbar
+    return None
+
+
+def fill(x: Any, y: Any,
+         color: Optional[str] = None,
+         alpha: Optional[float] = None,
+         edgecolor: Optional[str] = None,
+         linewidth: Optional[float] = None,
+         **kwargs: Any) -> Any:
+    """Fill a polygon."""
+    return gca().fill(x, y, color=color, alpha=alpha,
+                      edgecolor=edgecolor, linewidth=linewidth, **kwargs)
+
+
+class Polygon:
+    """matplotlib-compatible Polygon patch."""
+    def __init__(self, xy, facecolor=None, edgecolor=None,
+                 linewidth=None, alpha=None, **kwargs):
+        self._xy = np.asarray(xy)
+        self._facecolor = facecolor
+        self._edgecolor = edgecolor
+        self._linewidth = linewidth
+        self._alpha = alpha
+
+    def get_xy(self):
+        return self._xy
+
+    def get_facecolor(self):
+        if self._facecolor is None:
+            return (0.0, 0.0, 1.0, 0.8)
+        if isinstance(self._facecolor, str):
+            from .colors import resolve_color
+            c = resolve_color(self._facecolor, self._alpha or 0.8)
+            return (c[0]/255, c[1]/255, c[2]/255, c[3]/255)
+        return self._facecolor
+
+    def get_edgecolor(self):
+        if self._edgecolor is None:
+            return None
+        if isinstance(self._edgecolor, str):
+            from .colors import resolve_color
+            c = resolve_color(self._edgecolor, 1.0)
+            return (c[0]/255, c[1]/255, c[2]/255, 1.0)
+        return self._edgecolor
+
+    def get_linewidth(self):
+        return self._linewidth
+
+
 def imshow(X: Any,
            cmap: Optional[Any] = None,
            norm: Optional[Any] = None,

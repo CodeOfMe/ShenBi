@@ -43,7 +43,7 @@ plt.plot(x, np.sin(x), 'r-', linewidth=2, label='sin(x)')
 plt.plot(x, np.cos(x), 'b--', linewidth=2, label='cos(x)')
 plt.title('Simple Plot — sin(x) & cos(x)')
 plt.xlabel('x'); plt.ylabel('y')
-plt.grid(alpha=0.15); plt.legend()
+plt.legend()
 save('pg01_simple_plot')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -61,7 +61,7 @@ for i, (fmt, name) in enumerate(styles):
     plt.plot(x, np.sin(x - i*0.3) + i*0.5, fmt, linewidth=1.5, markersize=5, label=name)
 plt.title('Line Styles, Markers & Colors')
 plt.xlabel('x'); plt.ylabel('y')
-plt.grid(alpha=0.15); plt.legend(fontsize=8)
+plt.legend(fontsize=8)
 save('pg02_plotting_styles')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -76,19 +76,14 @@ n = 5000
 sx = np.random.randn(n); sy = np.random.randn(n)
 axes[0].scatter(sx, sy, s=6, c='steelblue', alpha=0.3, edgecolors='none')
 axes[0].set_title(f'Scatter — Single Color ({n} pts)')
-axes[0].grid(alpha=0.15)
-
 # Colormap viridis
 t = np.sqrt(sx*sx + sy*sy)
 axes[1].scatter(sx, sy, s=8, c=t, cmap='viridis', alpha=0.5, edgecolors='none')
 axes[1].set_title('Scatter — Viridis')
-axes[1].grid(alpha=0.15)
-
 # Colormap plasma with black edges
 axes[2].scatter(sx[:1000], sy[:1000], s=15, c=t[:1000], cmap='plasma',
                  edgecolors='#333', linewidths=0.5, alpha=0.8)
 axes[2].set_title('Scatter — Plasma + Edges')
-axes[2].grid(alpha=0.15)
 plt.tight_layout()
 save('pg03_scatter_plots')
 
@@ -102,7 +97,6 @@ plt.figure(figsize=(8, 8))
 plt.scatter(sx, sy, s=2, c='#1f77b4', alpha=0.15, edgecolors='none')
 plt.title('Scatter (100,000 pts) — High Performance')
 plt.xlabel('x'); plt.ylabel('y')
-plt.grid(alpha=0.10)
 save_png('pg04_scatter_100k')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -118,13 +112,10 @@ fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 axes[0].bar(range(len(categories)), values, color=bar_colors, edgecolor='#333', linewidth=1)
 axes[0].set_xticks(range(len(categories))); axes[0].set_xticklabels(categories, rotation=45)
 axes[0].set_title('Bar Chart — Multi Color')
-axes[0].set_ylabel('Sales'); axes[0].grid(axis='y', alpha=0.15)
-
-axes[1].barh(range(len(categories)), values, color=bar_colors, edgecolor='#333', linewidth=1)
+axes[0].set_ylabel('Sales'); axes[1].barh(range(len(categories)), values, color=bar_colors, edgecolor='#333', linewidth=1)
 axes[1].set_yticks(range(len(categories))); axes[1].set_yticklabels(categories)
 axes[1].set_title('Horizontal Bar Chart')
-axes[1].set_xlabel('Sales'); axes[1].grid(axis='x', alpha=0.15)
-plt.tight_layout()
+axes[1].set_xlabel('Sales'); plt.tight_layout()
 save('pg05_bar_graphs')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -140,7 +131,7 @@ plt.errorbar(x, y, yerr=yerr, fmt='ro-', capsize=4, markersize=6,
 plt.plot(x, np.sin(x), 'b-', alpha=0.4, linewidth=1.5, label='True sin(x)')
 plt.title('Error Bar Plot')
 plt.xlabel('x'); plt.ylabel('y')
-plt.grid(alpha=0.15); plt.legend()
+plt.legend()
 save('pg06_errorbar')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -155,7 +146,7 @@ plt.plot(x, y1, '#1f77b4', linewidth=1, label='Lower')
 plt.plot(x, y2, '#1f77b4', linewidth=1, label='Upper')
 plt.title('Fill Between Curves')
 plt.xlabel('x'); plt.ylabel('y')
-plt.grid(alpha=0.15); plt.legend()
+plt.legend()
 save('pg07_fill_between')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -173,7 +164,7 @@ for i, mk in enumerate(markers):
              markersize=8, linewidth=1.5, label=f"'{mk}'")
 plt.title('All Marker Types')
 plt.xlabel('x'); plt.ylabel('y')
-plt.grid(alpha=0.15); plt.legend(loc='lower left', fontsize=8, ncol=2)
+plt.legend(loc='lower left', fontsize=8, ncol=2)
 save('pg08_symbols')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -190,8 +181,7 @@ for idx, cname in enumerate(cmap_names):
     ax = axes_flat[idx]
     ax.scatter(sx, sy, s=8, c=t_vals, cmap=cname, alpha=0.6, edgecolors='none')
     ax.set_title(cname)
-    ax.grid(alpha=0.10)
-plt.tight_layout()
+    plt.tight_layout()
 save('pg09_colormaps')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -204,15 +194,10 @@ y = x**1.5 + np.random.randn(N) * x * 0.3
 fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 axes[0].loglog(x, y, 'b.', markersize=1, alpha=0.3)
 axes[0].set_title('loglog'); axes[0].set_xlabel('x'); axes[0].set_ylabel('y')
-axes[0].grid(alpha=0.15)
-
 axes[1].semilogy(x, y, 'r.', markersize=1, alpha=0.3)
 axes[1].set_title('semilogy'); axes[1].set_xlabel('x'); axes[1].set_ylabel('y')
-axes[1].grid(alpha=0.15)
-
 axes[2].semilogx(x, y, 'g.', markersize=1, alpha=0.3)
 axes[2].set_title('semilogx'); axes[2].set_xlabel('x'); axes[2].set_ylabel('y')
-axes[2].grid(alpha=0.15)
 plt.tight_layout()
 save('pg10_log_axes')
 
@@ -225,8 +210,6 @@ plt.figure(figsize=(10, 6))
 ax1 = plt.gca()
 ax1.plot(x, np.sin(x), 'b-', linewidth=1.5, label='sin(x)')
 ax1.set_xlabel('x'); ax1.set_ylabel('sin(x)', color='b')
-ax1.grid(alpha=0.15)
-
 ax2 = ax1.twinx()
 ax2.plot(x, np.exp(x**0.3) - 1, 'r--', linewidth=1.5, label='exp growth')
 ax2.set_ylabel('growth', color='r')
@@ -264,7 +247,6 @@ plt.axvline(x=np.pi, color='green', linestyle=':', linewidth=2)
 plt.axvline(x=2*np.pi, color='green', linestyle=':', linewidth=2)
 plt.title('Reference Lines (axhline / axvline)')
 plt.xlabel('x'); plt.ylabel('sin(x)')
-plt.grid(alpha=0.15)
 save('pg13_infinite_lines')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -273,11 +255,8 @@ save('pg13_infinite_lines')
 print("14. LinkedViews / Shared Axes")
 x = np.linspace(0, 4 * np.pi, N)
 fig, axes = plt.subplots(3, 1, figsize=(10, 9), sharex=True)
-axes[0].plot(x, np.sin(x), 'r-', linewidth=1); axes[0].set_ylabel('sin(x)'); axes[0].grid(alpha=0.15)
-axes[1].plot(x, np.cos(x), 'b-', linewidth=1); axes[1].set_ylabel('cos(x)'); axes[1].grid(alpha=0.15)
-axes[2].plot(x, np.sin(x) * np.cos(x), 'g-', linewidth=1); axes[2].set_ylabel('sin·cos')
-axes[2].set_xlabel('x'); axes[2].grid(alpha=0.15)
-plt.tight_layout()
+axes[0].plot(x, np.sin(x), 'r-', linewidth=1); axes[0].set_ylabel('sin(x)'); axes[1].plot(x, np.cos(x), 'b-', linewidth=1); axes[1].set_ylabel('cos(x)'); axes[2].plot(x, np.sin(x) * np.cos(x), 'g-', linewidth=1); axes[2].set_ylabel('sin·cos')
+axes[2].set_xlabel('x'); plt.tight_layout()
 save('pg14_linked_views')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -309,7 +288,7 @@ for i in range(5):
 plt.plot(x, y1, 'r-', linewidth=1, label='sin(x)')
 plt.plot(x, y2, 'b-', linewidth=1, label='cos(x)')
 plt.title('Isocurve-Style Fill')
-plt.xlabel('x'); plt.grid(alpha=0.15); plt.legend()
+plt.xlabel('x'); plt.legend()
 save('pg16_isocurve')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -322,7 +301,6 @@ for i in range(20):
     plt.plot(x, np.sin(x + i * 0.3) + i * 0.5, linewidth=0.8, alpha=0.7)
 plt.title('Multi-Data Plot (20 lines)')
 plt.xlabel('x'); plt.ylabel('y')
-plt.grid(alpha=0.10)
 save('pg17_multi_data')
 
 # ═══════════════════════════════════════════════════════════════════
@@ -333,10 +311,9 @@ x = np.linspace(0, 2*np.pi, 30)
 y = np.exp(-0.1*x) * np.sin(x)
 fig, axes = plt.subplots(1, 2, figsize=(14, 6))
 axes[0].stem(x, y, linefmt='C0-', markerfmt='C0o', basefmt='C3-')
-axes[0].set_title('Stem Plot'); axes[0].grid(alpha=0.15)
-axes[1].step(x, y, where='mid', label='steps-mid')
+axes[0].set_title('Stem Plot'); axes[1].step(x, y, where='mid', label='steps-mid')
 axes[1].step(x, y, where='post', linewidth=0.5, alpha=0.5, label='steps-post')
-axes[1].set_title('Step Plot'); axes[1].grid(alpha=0.15); axes[1].legend()
+axes[1].set_title('Step Plot'); axes[1].legend()
 plt.tight_layout()
 save('pg18_stem_step')
 
@@ -349,7 +326,6 @@ plt.figure(figsize=(10, 6))
 plt.boxplot(data, tick_labels=['A', 'B', 'C', 'D', 'E', 'F'])
 plt.title('Box Plot — 6 Groups')
 plt.xlabel('Group'); plt.ylabel('Value')
-plt.grid(axis='y', alpha=0.15)
 save('pg19_boxplot')
 
 # ═══════════════════════════════════════════════════════════════════

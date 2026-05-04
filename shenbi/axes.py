@@ -449,7 +449,134 @@ class ShenBiAxes:
         self._plot_item.addItem(line)
         return line
 
-    # ── Image ─────────────────────────────────────────────────────────
+    # ── Contour ───────────────────────────────────────────────────────
+
+    def contour(self, X: Any, Y: Any, Z: Any,
+                levels: Optional[Any] = None,
+                colors: Optional[Any] = None,
+                linewidths: Optional[float] = None,
+                linestyles: Optional[str] = None,
+                alpha: Optional[float] = None,
+                **kwargs: Any) -> Any:
+        """Draw contour lines using matplotlib for computation."""
+        import matplotlib.pyplot as _mpl_plt
+        X = np.asarray(X, dtype=float)
+        Y = np.asarray(Y, dtype=float)
+        Z = np.asarray(Z, dtype=float)
+
+        if levels is None:
+            levels = 10
+
+        color = colors or 'k'
+        lw = linewidths or 0.5
+        ls = linestyles or '-'
+        a = alpha or 1.0
+
+        # Use matplotlib to compute contour segments
+        fig_tmp, ax_tmp = _mpl_plt.subplots()
+        cs = ax_tmp.contour(X, Y, Z, levels=levels)
+        collections = []
+        for level, segs in zip(cs.levels, cs.allsegs):
+            for seg in segs:
+                if len(seg) > 1:
+                    line = self.plot(seg[:, 0], seg[:, 1], linestyle=ls,
+                                    linewidth=lw, color=color, alpha=a)[0]
+                    collections.append(line)
+        _mpl_plt.close(fig_tmp)
+        return collections
+
+    def contourf(self, X: Any, Y: Any, Z: Any,
+                 levels: Optional[Any] = None,
+                 cmap: Optional[Any] = None,
+                 alpha: Optional[float] = None,
+                 **kwargs: Any) -> Any:
+        """Draw filled contours using matplotlib for computation."""
+        import matplotlib.pyplot as _mpl_plt
+        from .cm import get_cmap as _get_cmap
+        X = np.asarray(X, dtype=float)
+        Y = np.asarray(Y, dtype=float)
+        Z = np.asarray(Z, dtype=float)
+
+        if levels is None:
+            levels = 10
+
+        cmap_obj = _get_cmap(cmap) if cmap is not None else _get_cmap('viridis')
+        a = alpha if alpha is not None else 0.8
+
+        # Use matplotlib to compute contour segments
+        fig_tmp, ax_tmp = _mpl_plt.subplots()
+        cs = ax_tmp.contourf(X, Y, Z, levels=levels)
+        collections = []
+        for i, segs in enumerate(cs.allsegs):
+            level_idx = min(i, len(cs.levels) - 2) if len(cs.levels) > 1 else 0
+            color_val = level_idx / max(len(cs.levels) - 2, 1)
+            c = cmap_obj(np.clip(color_val, 0, 1), bytes=True)
+            rgba = (int(c[0]), int(c[1]), int(c[2]), int(a * 255))
+            for seg in segs:
+                if len(seg) > 1:
+                    fill = pg.FillBetweenItem(
+                        pg.PlotDataItem(seg[:, 0], seg[:, 1]),
+                        pg.PlotDataItem(seg[:, 0], np.full_like(seg[:, 1], Z.min() - 1)),
+                        brush=pg.mkBrush(color=rgba),
+                    )
+                    self._plot_item.addItem(fill)
+                    collections.append(fill)
+        _mpl_plt.close(fig_tmp)
+        return collections
+
+    def fill(self, x: Any, y: Any,
+             color: Optional[str] = None,
+             alpha: Optional[float] = None,
+             edgecolor: Optional[str] = None,
+             linewidth: Optional[float] = None,
+             **kwargs: Any) -> Any:
+        """Fill a polygon defined by x, y vertices."""
+        x = np.asarray(x, dtype=float)
+        y = np.asarray(y, dtype=float)
+        c = color or 'b'
+        a = alpha if alpha is not None else 0.8
+        rgba = resolve_color(c, a)
+
+        fill_item = pg.FillBetweenItem(
+            pg.PlotDataItem(x, y),
+            pg.PlotDataItem(x, np.full_like(y, y.min() - 1)),
+            brush=pg.mkBrush(color=rgba),
+        )
+        self._plot_item.addItem(fill_item)
+
+        if edgecolor is not None:
+            ec = resolve_color(edgecolor)
+            edge_line = self.plot(np.append(x, x[0]), np.append(y, y[0]),
+                                 color=edgecolor, linewidth=linewidth or 1.0)[0]
+
+        return fill_item
+
+    def add_patch(self, patch: Any) -> None:
+        """Add a matplotlib-like patch (Polygon) to the axes."""
+        if hasattr(patch, 'get_xy') and hasattr(patch, 'get_facecolor'):
+            xy = np.asarray(patch.get_xy())
+            fc = patch.get_facecolor()
+            ec = patch.get_edgecolor()
+            if len(fc) == 4:
+                rgba = (int(fc[0]*255), int(fc[1]*255), int(fc[2]*255), int(fc[3]*255))
+            else:
+                rgba = resolve_color('b', 0.8)
+
+            fill_item = pg.FillBetweenItem(
+                pg.PlotDataItem(xy[:, 0], xy[:, 1]),
+                pg.PlotDataItem(xy[:, 0], np.full_like(xy[:, 1], xy[:, 1].min() - 1)),
+                brush=pg.mkBrush(color=rgba),
+            )
+            self._plot_item.addItem(fill_item)
+
+            if ec is not None and len(ec) == 4 and ec[3] > 0:
+                ec_rgba = (int(ec[0]*255), int(ec[1]*255), int(ec[2]*255), int(ec[3]*255))
+                self.plot(np.append(xy[:, 0], xy[0, 0]),
+                         np.append(xy[:, 1], xy[0, 1]),
+                         color=(ec_rgba[0], ec_rgba[1], ec_rgba[2], ec_rgba[3]),
+                         linewidth=patch.get_linewidth() or 0.5)
+
+    # ── Image ────────────────────────────────────────────────────────
 
     def imshow(self, X: Any,
                cmap: Optional[Any] = None,
