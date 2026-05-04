@@ -204,4 +204,4 @@ python demo_pyqtgraph_3d.py   # 10 个 3D 演示
 
 ## 许可证
 
-MIT
+GPLv3 — 完整文本见 [LICENSE](LICENSE)。

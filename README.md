@@ -208,4 +208,4 @@ python demo_pyqtgraph_3d.py   # 10 3D demos
 
 ## License
 
-MIT
+GPLv3 — See [LICENSE](LICENSE) for the full text.
