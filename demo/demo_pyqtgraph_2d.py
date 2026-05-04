@@ -1,12 +1,10 @@
 """
-ShenBi — PyQtGraph 2D Demos Reimagined
-========================================
-Implements key pyqtgraph 2D examples using ShenBi's matplotlib-compatible API,
-including: Plotting, ScatterPlot, BarGraphItem, ErrorBarItem, FillBetweenItem,
-Symbols, ColorMaps, LinkedViews, LogAxis, MultiplePlotAxes, Histogram, InfiniteLine,
-Isocurve, ImageView, PColorMesh, ScrollingPlots, MultiDataPlot, and more.
+ShenBi — Comprehensive Dataset Visualization Demos
+====================================================
+Uses real standard datasets (iris, wine, breast_cancer, digits, diabetes)
+to demonstrate all plotting capabilities with meaningful data.
 
-PNG + SVG output for each demo.
+No grid by default. White background. All matplotlib-compatible syntax.
 """
 import os
 import sys
@@ -15,7 +13,81 @@ os.environ.setdefault('QT_QPA_PLATFORM', 'offscreen')
 
 import numpy as np
 import shenbi.pyplot as plt
+from shenbi.colors import TAB10_COLORS
 from shenbi.cm import get_cmap
+
+# ── Load Standard Datasets ─────────────────────────────────────────
+try:
+    from sklearn.datasets import (
+        load_iris, load_wine, load_breast_cancer,
+        load_digits, load_diabetes, fetch_california_housing
+    )
+    HAS_SKLEARN = True
+except ImportError:
+    HAS_SKLEARN = False
+    print("sklearn not installed, using synthetic data")
+
+def get_iris():
+    if HAS_SKLEARN:
+        return load_iris()
+    # Fallback synthetic iris-like data
+    np.random.seed(42)
+    n = 50
+    d = {'data': np.vstack([
+        np.random.randn(n, 4) * 0.3 + [5, 3.5, 1.5, 0.3],
+        np.random.randn(n, 4) * 0.4 + [5.9, 2.8, 4.3, 1.3],
+        np.random.randn(n, 4) * 0.5 + [6.6, 3.0, 5.5, 2.0],
+    ]), 'target': np.array([0]*n + [1]*n + [2]*n),
+       'target_names': ['setosa', 'versicolor', 'virginica'],
+       'feature_names': ['sepal length', 'sepal width', 'petal length', 'petal width']}
+    return type('Dataset', (), d)()
+
+def get_wine():
+    if HAS_SKLEARN:
+        return load_wine()
+    np.random.seed(42)
+    n = 60
+    d = {'data': np.vstack([
+        np.random.randn(n, 13) * 0.5 + 13,
+        np.random.randn(n, 13) * 0.5 + 12,
+        np.random.randn(n, 13) * 0.5 + 13.5,
+    ]), 'target': np.array([0]*n + [1]*n + [2]*n),
+       'target_names': ['Class 0', 'Class 1', 'Class 2'],
+       'feature_names': [f'feat_{i}' for i in range(13)]}
+    return type('Dataset', (), d)()
+
+def get_breast_cancer():
+    if HAS_SKLEARN:
+        return load_breast_cancer()
+    np.random.seed(42)
+    n = 285
+    d = {'data': np.vstack([
+        np.random.randn(n, 30) * 0.3,
+        np.random.randn(n, 30) * 0.3 + 1,
+    ]), 'target': np.array([0]*n + [1]*n),
+       'target_names': ['malignant', 'benign'],
+       'feature_names': [f'f{i}' for i in range(30)]}
+    return type('Dataset', (), d)()
+
+def get_digits():
+    if HAS_SKLEARN:
+        return load_digits()
+    np.random.seed(42)
+    n = 180
+    d = {'data': np.random.rand(n, 64) * 16,
+         'target': np.tile(np.arange(10), n//10),
+         'images': np.random.rand(n, 8, 8) * 16}
+    return type('Dataset', (), d)()
+
+def get_diabetes():
+    if HAS_SKLEARN:
+        return load_diabetes()
+    np.random.seed(42)
+    n = 442
+    d = {'data': np.random.randn(n, 10),
+         'target': np.random.randn(n) * 100 + 150,
+         'feature_names': ['age', 'sex', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6']}
+    return type('Dataset', (), d)()
 
 OUT_DIR = os.path.join(os.path.dirname(__file__), 'output')
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -31,316 +103,400 @@ def save_png(name):
     print(f"  {name}.png")
     plt.close('all')
 
-N = 10_000
+# Load all datasets
+iris = get_iris()
+wine = get_wine()
+cancer = get_breast_cancer()
+digits = get_digits()
+diabetes = get_diabetes()
 
 # ═══════════════════════════════════════════════════════════════════
-#  1. SimplePlot — basic line plot (pyqtgraph SimplePlot.py)
+#  1. IRIS — Scatter matrix (sepal length vs width)
 # ═══════════════════════════════════════════════════════════════════
-print("\n1. SimplePlot")
-x = np.linspace(0, 4 * np.pi, N)
-plt.figure(figsize=(10, 5))
-plt.plot(x, np.sin(x), 'r-', linewidth=2, label='sin(x)')
-plt.plot(x, np.cos(x), 'b--', linewidth=2, label='cos(x)')
-plt.title('Simple Plot — sin(x) & cos(x)')
-plt.xlabel('x'); plt.ylabel('y')
+print("\n1. Iris — Sepal Length vs Width (colored by species)")
+X = iris.data
+y = iris.target
+names = iris.target_names
+feat = iris.feature_names
+
+plt.figure(figsize=(8, 6))
+for i, name in enumerate(names):
+    mask = y == i
+    plt.scatter(X[mask, 0], X[mask, 1], s=40, c=TAB10_COLORS[i],
+                alpha=0.7, edgecolors='white', linewidths=0.5, label=name)
+plt.title('Iris Dataset — Sepal Length vs Sepal Width')
+plt.xlabel(f'{feat[0]} (cm)')
+plt.ylabel(f'{feat[1]} (cm)')
 plt.legend()
-save('pg01_simple_plot')
+save('ds01_iris_sepal')
 
 # ═══════════════════════════════════════════════════════════════════
-#  2. Plotting — multiple line styles, markers, colors
+#  2. IRIS — Petal scatter with colormap
 # ═══════════════════════════════════════════════════════════════════
-print("2. Plotting — Styles & Markers")
-x = np.linspace(0, 10, 200)
+print("2. Iris — Petal Length vs Width (colormap)")
+plt.figure(figsize=(8, 6))
+scatter = plt.scatter(X[:, 2], X[:, 3], s=50, c=y, cmap='viridis',
+                       alpha=0.8, edgecolors='white', linewidths=0.5)
+plt.title('Iris — Petal Length vs Petal Width')
+plt.xlabel(f'{feat[2]} (cm)')
+plt.ylabel(f'{feat[3]} (cm)')
+plt.colorbar(scatter, label='Species')
+save('ds02_iris_petal_cmap')
+
+# ═══════════════════════════════════════════════════════════════════
+#  3. IRIS — Boxplot by species
+# ═══════════════════════════════════════════════════════════════════
+print("3. Iris — Boxplot (all features by species)")
+fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+for ax_idx, ax in enumerate(axes.flat):
+    data_by_class = [X[y == i, ax_idx] for i in range(3)]
+    ax.boxplot(data_by_class, tick_labels=names)
+    ax.set_title(f'{feat[ax_idx]}')
+    ax.set_ylabel('cm')
+plt.suptitle('Iris Dataset — Feature Distribution by Species')
+plt.tight_layout()
+save('ds03_iris_boxplot')
+
+# ═══════════════════════════════════════════════════════════════════
+#  4. IRIS — Histogram overlay
+# ═══════════════════════════════════════════════════════════════════
+print("4. Iris — Histogram overlay (petal length)")
+plt.figure(figsize=(10, 6))
+for i, name in enumerate(names):
+    mask = y == i
+    plt.hist(X[mask, 2], bins=20, alpha=0.5, color=TAB10_COLORS[i],
+             edgecolor='white', linewidth=0.5, label=name)
+plt.title('Iris — Petal Length Distribution by Species')
+plt.xlabel(f'{feat[2]} (cm)')
+plt.ylabel('Count')
+plt.legend()
+save('ds04_iris_hist')
+
+# ═══════════════════════════════════════════════════════════════════
+#  5. IRIS — Bar chart (mean values)
+# ═══════════════════════════════════════════════════════════════════
+print("5. Iris — Mean feature values by species")
+means = np.array([X[y == i].mean(axis=0) for i in range(3)])
+x_pos = np.arange(len(feat))
+width = 0.25
+
 plt.figure(figsize=(12, 6))
-styles = [
-    ('r-', 'solid'), ('b--', 'dashed'), ('g-.', 'dash-dot'),
-    ('k:', 'dotted'), ('mo-', 'circle+line'), ('c^--', 'triangle'),
-    ('ys-', 'square'), ('#e377c2D-', 'diamond'),
-]
-for i, (fmt, name) in enumerate(styles):
-    plt.plot(x, np.sin(x - i*0.3) + i*0.5, fmt, linewidth=1.5, markersize=5, label=name)
-plt.title('Line Styles, Markers & Colors')
-plt.xlabel('x'); plt.ylabel('y')
+for i, name in enumerate(names):
+    plt.bar(x_pos + i * width, means[i], width, label=name,
+            color=TAB10_COLORS[i], edgecolor='white', linewidth=0.5)
+plt.xticks(x_pos + width, feat, rotation=45, ha='right')
+plt.title('Iris — Mean Feature Values by Species')
+plt.ylabel('Mean Value (cm)')
+plt.legend()
+save('ds05_iris_bar')
+
+# ═══════════════════════════════════════════════════════════════════
+#  6. WINE — Radar/parallel coordinates style
+# ═══════════════════════════════════════════════════════════════════
+print("6. Wine — Feature means by class")
+wine_data = wine.data
+wine_y = wine.target
+wine_names = wine.target_names
+wine_feat = wine.feature_names[:6]  # First 6 features for readability
+
+wine_means = np.array([wine_data[wine_y == i, :6].mean(axis=0) for i in range(3)])
+x_pos = np.arange(6)
+width = 0.25
+
+plt.figure(figsize=(12, 6))
+for i, name in enumerate(wine_names):
+    plt.bar(x_pos + i * width, wine_means[i], width, label=name,
+            color=TAB10_COLORS[i], edgecolor='white', linewidth=0.5)
+plt.xticks(x_pos + width, wine_feat, rotation=45, ha='right')
+plt.title('Wine Dataset — Mean Feature Values by Class (first 6)')
+plt.ylabel('Mean Value')
+plt.legend()
+save('ds06_wine_bar')
+
+# ═══════════════════════════════════════════════════════════════════
+#  7. WINE — Scatter with error bars
+# ═══════════════════════════════════════════════════════════════════
+print("7. Wine — Scatter with error bars")
+plt.figure(figsize=(8, 6))
+for i, name in enumerate(wine_names):
+    mask = wine_y == i
+    x_mean = wine_data[mask, 0].mean()
+    y_mean = wine_data[mask, 1].mean()
+    x_std = wine_data[mask, 0].std()
+    y_std = wine_data[mask, 1].std()
+    plt.errorbar(x_mean, y_mean, xerr=x_std, yerr=y_std, fmt='o',
+                 color=TAB10_COLORS[i], markersize=10, capsize=5,
+                 label=f'{name} (mean±std)')
+plt.title('Wine Dataset — Feature 0 vs Feature 1 (mean ± std)')
+plt.xlabel(wine_feat[0])
+plt.ylabel(wine_feat[1])
+plt.legend()
+save('ds07_wine_errorbar')
+
+# ═══════════════════════════════════════════════════════════════════
+#  8. BREAST CANCER — Feature importance bar
+# ═══════════════════════════════════════════════════════════════════
+print("8. Breast Cancer — Feature means (malignant vs benign)")
+cancer_data = cancer.data
+cancer_y = cancer.target
+cancer_names = cancer.target_names
+cancer_feat = cancer.feature_names[:10]  # Top 10
+
+cancer_means = np.array([cancer_data[cancer_y == i, :10].mean(axis=0) for i in range(2)])
+x_pos = np.arange(10)
+width = 0.35
+
+plt.figure(figsize=(14, 6))
+plt.bar(x_pos - width/2, cancer_means[0], width, label=cancer_names[0],
+        color='#d62728', edgecolor='white', linewidth=0.5)
+plt.bar(x_pos + width/2, cancer_means[1], width, label=cancer_names[1],
+        color='#2ca02c', edgecolor='white', linewidth=0.5)
+plt.xticks(x_pos, cancer_feat, rotation=45, ha='right')
+plt.title('Breast Cancer — Mean Feature Values (Malignant vs Benign)')
+plt.ylabel('Mean Value')
+plt.legend()
+save('ds08_cancer_bar')
+
+# ═══════════════════════════════════════════════════════════════════
+#  9. BREAST CANCER — Violin-style boxplot
+# ═══════════════════════════════════════════════════════════════════
+print("9. Breast Cancer — Boxplot (top 5 features)")
+fig, axes = plt.subplots(1, 5, figsize=(16, 5))
+top_feats = [0, 1, 2, 3, 22]  # mean radius, mean texture, mean perimeter, mean area, worst texture
+for idx, ax in enumerate(axes):
+    feat_idx = top_feats[idx]
+    data_by_class = [cancer_data[cancer_y == i, feat_idx] for i in range(2)]
+    ax.boxplot(data_by_class, tick_labels=cancer_names)
+    ax.set_title(cancer_feat[feat_idx])
+plt.suptitle('Breast Cancer — Feature Distribution by Diagnosis')
+plt.tight_layout()
+save('ds09_cancer_boxplot')
+
+# ═══════════════════════════════════════════════════════════════════
+#  10. DIGITS — Image display
+# ═══════════════════════════════════════════════════════════════════
+print("10. Digits — Sample images")
+digits_data = digits.data
+digits_images = digits.images if hasattr(digits, 'images') else digits_data.reshape(-1, 8, 8)
+digits_y = digits.target
+
+fig, axes = plt.subplots(3, 5, figsize=(12, 8))
+axes = axes.flatten()
+for i, ax in enumerate(axes):
+    ax.imshow(digits_images[i], cmap='Greys', vmin=0, vmax=16)
+    ax.set_title(f'Digit: {digits_y[i]}')
+    ax.axis('off')
+plt.suptitle('Digits Dataset — Sample Images (8×8 pixels)')
+plt.tight_layout()
+save('ds10_digits_images')
+
+# ═══════════════════════════════════════════════════════════════════
+#  11. DIGITS — PCA-like scatter (first 2 features as proxy)
+# ═══════════════════════════════════════════════════════════════════
+print("11. Digits — Feature scatter (colored by digit)")
+plt.figure(figsize=(8, 6))
+for digit in range(10):
+    mask = digits_y == digit
+    plt.scatter(digits_data[mask, 0], digits_data[mask, 1],
+                s=20, c=get_cmap('tab10')(digit/9, bytes=True),
+                alpha=0.6, edgecolors='none', label=str(digit))
+plt.title('Digits — Feature 0 vs Feature 1')
+plt.xlabel('Feature 0')
+plt.ylabel('Feature 1')
+plt.legend(title='Digit', fontsize=8)
+save('ds11_digits_scatter')
+
+# ═══════════════════════════════════════════════════════════════════
+#  12. DIGITS — Histogram of pixel intensities
+# ═══════════════════════════════════════════════════════════════════
+print("12. Digits — Pixel intensity histogram")
+plt.figure(figsize=(10, 6))
+for digit in range(0, 10, 2):
+    mask = digits_y == digit
+    pixels = digits_data[mask].flatten()
+    plt.hist(pixels, bins=32, alpha=0.4, color=get_cmap('tab10')(digit/9, bytes=True),
+             edgecolor='white', linewidth=0.3, label=f'Digit {digit}')
+plt.title('Digits — Pixel Intensity Distribution (every other digit)')
+plt.xlabel('Pixel Value (0-16)')
+plt.ylabel('Count')
 plt.legend(fontsize=8)
-save('pg02_plotting_styles')
+save('ds12_digits_hist')
 
 # ═══════════════════════════════════════════════════════════════════
-#  3. ScatterPlot — single color + colormap
+#  13. DIABETES — Scatter with regression line
 # ═══════════════════════════════════════════════════════════════════
-print("3. ScatterPlot")
-np.random.seed(42)
-fig, axes = plt.subplots(1, 3, figsize=(18, 6))
+print("13. Diabetes — BMI vs Target with fit line")
+dia_data = diabetes.data
+dia_target = diabetes.target
+dia_feat = diabetes.feature_names
 
-# Single color with alpha
-n = 5000
-sx = np.random.randn(n); sy = np.random.randn(n)
-axes[0].scatter(sx, sy, s=6, c='steelblue', alpha=0.3, edgecolors='none')
-axes[0].set_title(f'Scatter — Single Color ({n} pts)')
-# Colormap viridis
-t = np.sqrt(sx*sx + sy*sy)
-axes[1].scatter(sx, sy, s=8, c=t, cmap='viridis', alpha=0.5, edgecolors='none')
-axes[1].set_title('Scatter — Viridis')
-# Colormap plasma with black edges
-axes[2].scatter(sx[:1000], sy[:1000], s=15, c=t[:1000], cmap='plasma',
-                 edgecolors='#333', linewidths=0.5, alpha=0.8)
-axes[2].set_title('Scatter — Plasma + Edges')
-plt.tight_layout()
-save('pg03_scatter_plots')
+bmi_idx = 2  # BMI is 3rd feature
+x_bmi = dia_data[:, bmi_idx]
+y_target = dia_target
 
-# ═══════════════════════════════════════════════════════════════════
-#  4. ScatterPlotSpeedTest — 100K pts
-# ═══════════════════════════════════════════════════════════════════
-print("4. ScatterPlotSpeed — 100K pts")
-sx = np.random.randn(100_000); sy = np.random.randn(100_000)
-t = np.sqrt(sx*sx + sy*sy)
-plt.figure(figsize=(8, 8))
-plt.scatter(sx, sy, s=2, c='#1f77b4', alpha=0.15, edgecolors='none')
-plt.title('Scatter (100,000 pts) — High Performance')
-plt.xlabel('x'); plt.ylabel('y')
-save_png('pg04_scatter_100k')
+# Simple linear fit
+coeffs = np.polyfit(x_bmi, y_target, 1)
+x_fit = np.linspace(x_bmi.min(), x_bmi.max(), 100)
+y_fit = np.polyval(coeffs, x_fit)
 
-# ═══════════════════════════════════════════════════════════════════
-#  5. BarGraphItem — multi-color bar chart
-# ═══════════════════════════════════════════════════════════════════
-print("5. BarGraphItem")
-categories = ['Apples', 'Oranges', 'Bananas', 'Grapes', 'Melons', 'Kiwi', 'Mango', 'Peach']
-values = np.random.randint(15, 80, len(categories))
-bar_colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728',
-              '#9467bd', '#8c564b', '#e377c2', '#17becf']
-
-fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-axes[0].bar(range(len(categories)), values, color=bar_colors, edgecolor='#333', linewidth=1)
-axes[0].set_xticks(range(len(categories))); axes[0].set_xticklabels(categories, rotation=45)
-axes[0].set_title('Bar Chart — Multi Color')
-axes[0].set_ylabel('Sales'); axes[1].barh(range(len(categories)), values, color=bar_colors, edgecolor='#333', linewidth=1)
-axes[1].set_yticks(range(len(categories))); axes[1].set_yticklabels(categories)
-axes[1].set_title('Horizontal Bar Chart')
-axes[1].set_xlabel('Sales'); plt.tight_layout()
-save('pg05_bar_graphs')
-
-# ═══════════════════════════════════════════════════════════════════
-#  6. ErrorBarItem
-# ═══════════════════════════════════════════════════════════════════
-print("6. ErrorBarItem")
-x = np.linspace(0, 10, 30)
-y = np.sin(x) + np.random.normal(0, 0.1, 30)
-yerr = 0.15 + 0.1 * np.random.rand(30)
-plt.figure(figsize=(10, 5))
-plt.errorbar(x, y, yerr=yerr, fmt='ro-', capsize=4, markersize=6,
-             label='Measured', ecolor='gray')
-plt.plot(x, np.sin(x), 'b-', alpha=0.4, linewidth=1.5, label='True sin(x)')
-plt.title('Error Bar Plot')
-plt.xlabel('x'); plt.ylabel('y')
-plt.legend()
-save('pg06_errorbar')
-
-# ═══════════════════════════════════════════════════════════════════
-#  7. FillBetweenItem
-# ═══════════════════════════════════════════════════════════════════
-print("7. FillBetweenItem")
-x = np.linspace(0, 10, N)
-y1 = np.sin(x); y2 = np.sin(x) + 0.6
-plt.figure(figsize=(10, 5))
-plt.fill_between(x, y1, y2, alpha=0.3, color='#1f77b4', label='Fill Region')
-plt.plot(x, y1, '#1f77b4', linewidth=1, label='Lower')
-plt.plot(x, y2, '#1f77b4', linewidth=1, label='Upper')
-plt.title('Fill Between Curves')
-plt.xlabel('x'); plt.ylabel('y')
-plt.legend()
-save('pg07_fill_between')
-
-# ═══════════════════════════════════════════════════════════════════
-#  8. Symbols — all marker types
-# ═══════════════════════════════════════════════════════════════════
-print("8. Symbols / Marker Types")
-markers = ['o', 's', '^', 'v', 'D', 'p', 'h', '*', '+', 'x']
-from shenbi.colors import TAB10_COLORS
-x_sub = np.linspace(0, 1, 20)
-
-plt.figure(figsize=(12, 8))
-for i, mk in enumerate(markers):
-    plt.plot(x_sub, np.sin(x_sub * 2 * np.pi * (i+1)),
-             marker=mk, linestyle='-', color=TAB10_COLORS[i % 10],
-             markersize=8, linewidth=1.5, label=f"'{mk}'")
-plt.title('All Marker Types')
-plt.xlabel('x'); plt.ylabel('y')
-plt.legend(loc='lower left', fontsize=8, ncol=2)
-save('pg08_symbols')
-
-# ═══════════════════════════════════════════════════════════════════
-#  9. ColorMaps — scatter + imshow demos
-# ═══════════════════════════════════════════════════════════════════
-print("9. ColorMaps")
-cmap_names = ['viridis', 'plasma', 'inferno', 'magma', 'jet', 'cool', 'hot', 'coolwarm']
-np.random.seed(0)
-fig, axes = plt.subplots(2, 4, figsize=(20, 10))
-axes_flat = axes.flatten()
-sx, sy = np.random.randn(800), np.random.randn(800)
-t_vals = np.sqrt(sx*sx + sy*sy)
-for idx, cname in enumerate(cmap_names):
-    ax = axes_flat[idx]
-    ax.scatter(sx, sy, s=8, c=t_vals, cmap=cname, alpha=0.6, edgecolors='none')
-    ax.set_title(cname)
-    plt.tight_layout()
-save('pg09_colormaps')
-
-# ═══════════════════════════════════════════════════════════════════
-#  10. LogAxis — semilogx, semilogy, loglog
-# ═══════════════════════════════════════════════════════════════════
-print("10. LogAxis / Log Plots")
-x = np.logspace(0, 3, N)
-y = x**1.5 + np.random.randn(N) * x * 0.3
-
-fig, axes = plt.subplots(1, 3, figsize=(18, 5))
-axes[0].loglog(x, y, 'b.', markersize=1, alpha=0.3)
-axes[0].set_title('loglog'); axes[0].set_xlabel('x'); axes[0].set_ylabel('y')
-axes[1].semilogy(x, y, 'r.', markersize=1, alpha=0.3)
-axes[1].set_title('semilogy'); axes[1].set_xlabel('x'); axes[1].set_ylabel('y')
-axes[2].semilogx(x, y, 'g.', markersize=1, alpha=0.3)
-axes[2].set_title('semilogx'); axes[2].set_xlabel('x'); axes[2].set_ylabel('y')
-plt.tight_layout()
-save('pg10_log_axes')
-
-# ═══════════════════════════════════════════════════════════════════
-#  11. MultiplePlotAxes — twinx, twiny
-# ═══════════════════════════════════════════════════════════════════
-print("11. MultiplePlotAxes — twinx")
-x = np.linspace(0, 10, N)
 plt.figure(figsize=(10, 6))
-ax1 = plt.gca()
-ax1.plot(x, np.sin(x), 'b-', linewidth=1.5, label='sin(x)')
-ax1.set_xlabel('x'); ax1.set_ylabel('sin(x)', color='b')
-ax2 = ax1.twinx()
-ax2.plot(x, np.exp(x**0.3) - 1, 'r--', linewidth=1.5, label='exp growth')
-ax2.set_ylabel('growth', color='r')
-plt.title('Multiple Axes — twinx()')
-plt.tight_layout()
-save('pg11_twin_axes')
+plt.scatter(x_bmi, y_target, s=15, c='#1f77b4', alpha=0.4, edgecolors='none')
+plt.plot(x_fit, y_fit, 'r-', linewidth=2, label=f'y = {coeffs[0]:.1f}x + {coeffs[1]:.0f}')
+plt.title(f'Diabetes — BMI vs Disease Progression')
+plt.xlabel(dia_feat[bmi_idx])
+plt.ylabel('Disease Progression')
+plt.legend()
+save('ds13_diabetes_scatter')
 
 # ═══════════════════════════════════════════════════════════════════
-#  12. Histogram
+#  14. DIABETES — Bar chart of feature correlations
 # ═══════════════════════════════════════════════════════════════════
-print("12. Histogram")
-data1 = np.random.randn(N); data2 = np.random.randn(N) * 0.8 + 2
+print("14. Diabetes — Feature correlations with target")
+correlations = np.array([np.corrcoef(dia_data[:, i], dia_target)[0, 1]
+                         for i in range(dia_data.shape[1])])
+colors_corr = ['#d62728' if c < 0 else '#2ca02c' for c in correlations]
 
-fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-axes[0].hist(data1, bins=60, color='#2ca02c', alpha=0.7, edgecolor='white', linewidth=0.3)
-axes[0].set_title(f'Histogram ({N:,} pts)')
-
-x = data2[data2 > 0]
-axes[1].hist(x, bins=50, color='#d62728', alpha=0.6, edgecolor='white', linewidth=0.3)
-axes[1].set_title('Histogram (shifted)')
-plt.tight_layout()
-save('pg12_histogram')
-
-# ═══════════════════════════════════════════════════════════════════
-#  13. InfiniteLine — axhline / axvline
-# ═══════════════════════════════════════════════════════════════════
-print("13. InfiniteLine (axhline / axvline)")
-x = np.linspace(0, 10, 100)
-plt.figure(figsize=(10, 6))
-plt.plot(x, np.sin(x), 'b-', linewidth=1.5)
-for y_val in [-0.75, -0.5, 0, 0.5, 0.75]:
-    plt.axhline(y=y_val, color='gray' if y_val != 0 else 'red',
-                linestyle='--' if y_val != 0 else '-', alpha=0.4 if y_val != 0 else 0.8)
-plt.axvline(x=np.pi, color='green', linestyle=':', linewidth=2)
-plt.axvline(x=2*np.pi, color='green', linestyle=':', linewidth=2)
-plt.title('Reference Lines (axhline / axvline)')
-plt.xlabel('x'); plt.ylabel('sin(x)')
-save('pg13_infinite_lines')
-
-# ═══════════════════════════════════════════════════════════════════
-#  14. LinkedViews — subplots with shared axes
-# ═══════════════════════════════════════════════════════════════════
-print("14. LinkedViews / Shared Axes")
-x = np.linspace(0, 4 * np.pi, N)
-fig, axes = plt.subplots(3, 1, figsize=(10, 9), sharex=True)
-axes[0].plot(x, np.sin(x), 'r-', linewidth=1); axes[0].set_ylabel('sin(x)'); axes[1].plot(x, np.cos(x), 'b-', linewidth=1); axes[1].set_ylabel('cos(x)'); axes[2].plot(x, np.sin(x) * np.cos(x), 'g-', linewidth=1); axes[2].set_ylabel('sin·cos')
-axes[2].set_xlabel('x'); plt.tight_layout()
-save('pg14_linked_views')
-
-# ═══════════════════════════════════════════════════════════════════
-#  15. ImageView — imshow with various styles
-# ═══════════════════════════════════════════════════════════════════
-print("15. ImageView / imshow")
-img = np.random.rand(200, 200)
-img_smooth = np.sin(np.linspace(0, 4*np.pi, 200)).reshape(-1, 1) * \
-             np.cos(np.linspace(0, 4*np.pi, 200)).reshape(1, -1)
-
-fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-axes[0].imshow(img, aspect='auto', vmin=0, vmax=1)
-axes[0].set_title('Random Image')
-axes[1].imshow(img_smooth, aspect='auto', extent=[0, 4*np.pi, 0, 4*np.pi])
-axes[1].set_title('Sinusoidal Pattern')
-plt.tight_layout()
-save('pg15_image_view')
-
-# ═══════════════════════════════════════════════════════════════════
-#  16. Isocurve — contour via filled regions
-# ═══════════════════════════════════════════════════════════════════
-print("16. Isocurve / Contour Style")
-x = np.linspace(0, 4 * np.pi, 500)
-y1 = np.sin(x); y2 = np.cos(x)
-plt.figure(figsize=(10, 5))
-for i in range(5):
-    offset = i * 0.8
-    plt.fill_between(x, y1 - offset, y2 + offset, alpha=0.08, color='steelblue')
-plt.plot(x, y1, 'r-', linewidth=1, label='sin(x)')
-plt.plot(x, y2, 'b-', linewidth=1, label='cos(x)')
-plt.title('Isocurve-Style Fill')
-plt.xlabel('x'); plt.legend()
-save('pg16_isocurve')
-
-# ═══════════════════════════════════════════════════════════════════
-#  17. MultiDataPlot — many lines on one plot
-# ═══════════════════════════════════════════════════════════════════
-print("17. MultiDataPlot — 20 lines")
-x = np.linspace(0, 10, N)
 plt.figure(figsize=(12, 6))
-for i in range(20):
-    plt.plot(x, np.sin(x + i * 0.3) + i * 0.5, linewidth=0.8, alpha=0.7)
-plt.title('Multi-Data Plot (20 lines)')
-plt.xlabel('x'); plt.ylabel('y')
-save('pg17_multi_data')
+bars = plt.bar(range(len(dia_feat)), correlations, color=colors_corr,
+               edgecolor='white', linewidth=0.5)
+plt.xticks(range(len(dia_feat)), dia_feat, rotation=45, ha='right')
+plt.axhline(y=0, color='gray', linestyle='-', linewidth=0.5)
+plt.title('Diabetes — Feature Correlation with Disease Progression')
+plt.ylabel('Correlation Coefficient')
+save('ds14_diabetes_corr')
 
 # ═══════════════════════════════════════════════════════════════════
-#  18. Stemplot & Step
+#  15. IRIS — Pairwise scatter (subset)
 # ═══════════════════════════════════════════════════════════════════
-print("18. Stem & Step")
-x = np.linspace(0, 2*np.pi, 30)
-y = np.exp(-0.1*x) * np.sin(x)
-fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-axes[0].stem(x, y, linefmt='C0-', markerfmt='C0o', basefmt='C3-')
-axes[0].set_title('Stem Plot'); axes[1].step(x, y, where='mid', label='steps-mid')
-axes[1].step(x, y, where='post', linewidth=0.5, alpha=0.5, label='steps-post')
-axes[1].set_title('Step Plot'); axes[1].legend()
+print("15. Iris — Pairwise feature scatter matrix")
+fig, axes = plt.subplots(4, 4, figsize=(14, 14))
+for i in range(4):
+    for j in range(4):
+        ax = axes[i, j]
+        if i == j:
+            # Histogram on diagonal
+            for k, name in enumerate(names):
+                mask = y == k
+                ax.hist(X[mask, i], bins=15, alpha=0.5, color=TAB10_COLORS[k],
+                        edgecolor='white', linewidth=0.3)
+            ax.set_title(feat[i])
+        else:
+            # Scatter off-diagonal
+            for k, name in enumerate(names):
+                mask = y == k
+                ax.scatter(X[mask, j], X[mask, i], s=15, c=TAB10_COLORS[k],
+                           alpha=0.5, edgecolors='none')
+        if i == 3:
+            ax.set_xlabel(feat[j])
+        if j == 0:
+            ax.set_ylabel(feat[i])
+plt.suptitle('Iris — Pairwise Feature Scatter Matrix', y=1.02)
 plt.tight_layout()
-save('pg18_stem_step')
+save('ds15_iris_pairwise')
 
 # ═══════════════════════════════════════════════════════════════════
-#  19. Boxplot
+#  16. IRIS — Cumulative distribution
 # ═══════════════════════════════════════════════════════════════════
-print("19. Boxplot")
-data = [np.random.randn(150) * (i+1) + i*8 for i in range(6)]
+print("16. Iris — Cumulative distribution (petal length)")
 plt.figure(figsize=(10, 6))
-plt.boxplot(data, tick_labels=['A', 'B', 'C', 'D', 'E', 'F'])
-plt.title('Box Plot — 6 Groups')
-plt.xlabel('Group'); plt.ylabel('Value')
-save('pg19_boxplot')
+for i, name in enumerate(names):
+    mask = y == i
+    vals = np.sort(X[mask, 2])
+    cumsum = np.arange(1, len(vals) + 1) / len(vals)
+    plt.plot(vals, cumsum, color=TAB10_COLORS[i], linewidth=2, label=name)
+plt.title('Iris — Cumulative Distribution of Petal Length')
+plt.xlabel(f'{feat[2]} (cm)')
+plt.ylabel('Cumulative Proportion')
+plt.legend()
+save('ds16_iris_cdf')
 
 # ═══════════════════════════════════════════════════════════════════
-#  20. Pie
+#  17. WINE — Stacked bar chart
 # ═══════════════════════════════════════════════════════════════════
-print("20. Pie")
-sizes = [22, 18, 35, 15, 10]
-labels = ['Product A', 'Product B', 'Product C', 'Product D', 'Other']
-colors = ['#ff9999', '#66b3ff', '#99ff99', '#ffcc99', '#c2c2f0']
-plt.figure(figsize=(8, 8))
-plt.pie(sizes, labels=labels, colors=colors, startangle=140)
-plt.title('Pie Chart — Product Distribution')
-save('pg20_pie')
+print("17. Wine — Stacked bar (feature contributions)")
+# Normalize features to [0,1] for stacking
+wine_norm = (wine_data[:, :5] - wine_data[:, :5].min(axis=0)) / \
+            (wine_data[:, :5].max(axis=0) - wine_data[:, :5].min(axis=0) + 1e-10)
+wine_class_means = np.array([wine_norm[wine_y == i, :5].mean(axis=0) for i in range(3)])
+
+plt.figure(figsize=(10, 6))
+bottom = np.zeros(3)
+for j in range(5):
+    plt.bar(range(3), wine_class_means[:, j], bottom=bottom,
+            label=wine_feat[j], color=TAB10_COLORS[j], edgecolor='white', linewidth=0.5)
+    bottom += wine_class_means[:, j]
+plt.xticks(range(3), wine_names)
+plt.title('Wine — Stacked Feature Contributions by Class')
+plt.ylabel('Normalized Mean')
+plt.legend(fontsize=8)
+save('ds17_wine_stacked')
+
+# ═══════════════════════════════════════════════════════════════════
+#  18. Multi-dataset comparison
+# ═══════════════════════════════════════════════════════════════════
+print("18. Multi-dataset — Sample size comparison")
+datasets = ['Iris', 'Wine', 'Breast\nCancer', 'Digits', 'Diabetes']
+sizes = [len(iris.data), len(wine.data), len(cancer.data),
+         len(digits.data), len(diabetes.data)]
+features = [iris.data.shape[1], wine.data.shape[1], cancer.data.shape[1],
+            digits.data.shape[1], diabetes.data.shape[1]]
+classes = [len(iris.target_names), len(wine.target_names),
+           len(cancer.target_names), 10, 1]
+
+fig, axes = plt.subplots(1, 3, figsize=(16, 5))
+axes[0].bar(datasets, sizes, color='#1f77b4', edgecolor='white', linewidth=0.5)
+axes[0].set_title('Sample Size')
+axes[0].set_ylabel('Number of Samples')
+axes[1].bar(datasets, features, color='#2ca02c', edgecolor='white', linewidth=0.5)
+axes[1].set_title('Number of Features')
+axes[1].set_ylabel('Features')
+axes[2].bar(datasets, classes, color='#d62728', edgecolor='white', linewidth=0.5)
+axes[2].set_title('Number of Classes')
+axes[2].set_ylabel('Classes')
+plt.suptitle('Dataset Overview Comparison')
+plt.tight_layout()
+save('ds18_dataset_overview')
+
+# ═══════════════════════════════════════════════════════════════════
+#  19. IRIS — Line plot (mean profiles)
+# ═══════════════════════════════════════════════════════════════════
+print("19. Iris — Mean feature profiles")
+plt.figure(figsize=(10, 6))
+x_feat = np.arange(4)
+for i, name in enumerate(names):
+    plt.plot(x_feat, means[i], 'o-', color=TAB10_COLORS[i], linewidth=2,
+             markersize=8, label=name)
+plt.xticks(x_feat, feat, rotation=45, ha='right')
+plt.title('Iris — Mean Feature Profiles by Species')
+plt.ylabel('Mean Value (cm)')
+plt.legend()
+save('ds19_iris_profiles')
+
+# ═══════════════════════════════════════════════════════════════════
+#  20. IRIS — Fill between (confidence bands)
+# ═══════════════════════════════════════════════════════════════════
+print("20. Iris — Confidence bands (petal measurements)")
+plt.figure(figsize=(10, 6))
+for i, name in enumerate(names):
+    mask = y == i
+    petal_l = X[mask, 2]
+    petal_w = X[mask, 3]
+    # Sort by petal length for fill_between
+    sort_idx = np.argsort(petal_l)
+    pl = petal_l[sort_idx]
+    pw = petal_w[sort_idx]
+    # Simple confidence band (±1 std)
+    std_w = np.std(pw)
+    plt.plot(pl, pw, color=TAB10_COLORS[i], linewidth=1.5, label=name)
+    plt.fill_between(pl, pw - std_w, pw + std_w, alpha=0.15, color=TAB10_COLORS[i])
+plt.title('Iris — Petal Length vs Width with Confidence Bands')
+plt.xlabel(f'{feat[2]} (cm)')
+plt.ylabel(f'{feat[3]} (cm)')
+plt.legend()
+save('ds20_iris_confidence')
 
 print(f"\n{'='*60}")
-print("  PyQtGraph 2D Demos Complete! (20 demos)")
+print("  Dataset Visualization Demos Complete! (20 demos)")
+print(f"  Datasets: Iris, Wine, Breast Cancer, Digits, Diabetes")
 print(f"  Output: {OUT_DIR}/")
 print(f"{'='*60}")
