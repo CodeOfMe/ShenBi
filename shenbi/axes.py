@@ -1041,14 +1041,17 @@ class ShenBiAxes:
                 *,
                 data: Optional[Any] = None) -> dict:
         """Draw a box and whisker plot."""
-        datasets = []
-        x_arr = np.asarray(x)
-        if x_arr.ndim == 1:
-            datasets = [x_arr]
-        elif x_arr.ndim == 2:
-            datasets = [x_arr[:, i] for i in range(x_arr.shape[1])]
+        # Handle list of 1D arrays (possibly different lengths)
+        if isinstance(x, (list, tuple)):
+            datasets = [np.asarray(d, dtype=float).flatten() for d in x]
         else:
-            datasets = [np.asarray(d) for d in x]
+            x_arr = np.asarray(x)
+            if x_arr.ndim == 1:
+                datasets = [x_arr]
+            elif x_arr.ndim == 2:
+                datasets = [x_arr[:, i] for i in range(x_arr.shape[1])]
+            else:
+                datasets = [np.asarray(d, dtype=float).flatten() for d in x]
 
         if positions is None:
             positions = list(range(1, len(datasets) + 1))
@@ -1130,6 +1133,20 @@ class ShenBiAxes:
         return result
 
     # ── Clear / Other ─────────────────────────────────────────────────
+
+    def axis(self, *args: Any, **kwargs: Any) -> None:
+        """Control axis appearance. ax.axis('off') hides axes."""
+        if args and args[0] == 'off':
+            for axis_name in ('bottom', 'left', 'top', 'right'):
+                axis = self._plot_item.getAxis(axis_name)
+                axis.setStyle(showValues=False)
+                axis.setPen(pg.mkPen(color=(0, 0, 0, 0)))
+            self._plot_item.showGrid(x=False, y=False)
+        elif args and args[0] == 'on':
+            for axis_name in ('bottom', 'left'):
+                axis = self._plot_item.getAxis(axis_name)
+                axis.setStyle(showValues=True)
+                axis.setPen(pg.mkPen(color='#333333', width=1))
 
     def cla(self) -> None:
         """Clear the axes."""

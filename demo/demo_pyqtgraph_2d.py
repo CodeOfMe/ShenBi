@@ -224,7 +224,7 @@ for i, name in enumerate(wine_names):
     y_mean = wine_data[mask, 1].mean()
     x_std = wine_data[mask, 0].std()
     y_std = wine_data[mask, 1].std()
-    plt.errorbar(x_mean, y_mean, xerr=x_std, yerr=y_std, fmt='o',
+    plt.errorbar([x_mean], [y_mean], xerr=[x_std], yerr=[y_std], fmt='o',
                  color=TAB10_COLORS[i], markersize=10, capsize=5,
                  label=f'{name} (mean±std)')
 plt.title('Wine Dataset — Feature 0 vs Feature 1 (mean ± std)')
@@ -262,7 +262,7 @@ save('ds08_cancer_bar')
 # ═══════════════════════════════════════════════════════════════════
 print("9. Breast Cancer — Boxplot (top 5 features)")
 fig, axes = plt.subplots(1, 5, figsize=(16, 5))
-top_feats = [0, 1, 2, 3, 22]  # mean radius, mean texture, mean perimeter, mean area, worst texture
+top_feats = [0, 1, 2, 3, 4]  # mean radius, mean texture, mean perimeter, mean area, mean smoothness
 for idx, ax in enumerate(axes):
     feat_idx = top_feats[idx]
     data_by_class = [cancer_data[cancer_y == i, feat_idx] for i in range(2)]
@@ -298,8 +298,8 @@ plt.figure(figsize=(8, 6))
 for digit in range(10):
     mask = digits_y == digit
     plt.scatter(digits_data[mask, 0], digits_data[mask, 1],
-                s=20, c=get_cmap('tab10')(digit/9, bytes=True),
-                alpha=0.6, edgecolors='none', label=str(digit))
+                s=20, c=TAB10_COLORS[digit], alpha=0.6,
+                edgecolors='none', label=str(digit))
 plt.title('Digits — Feature 0 vs Feature 1')
 plt.xlabel('Feature 0')
 plt.ylabel('Feature 1')
