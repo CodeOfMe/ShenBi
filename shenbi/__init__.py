@@ -25,7 +25,7 @@ from .utils import parse_format_string
 from .cm import cm, get_cmap, Colormap
 from . import mplot3d
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = [
     "pyplot",
     "mplot3d",
