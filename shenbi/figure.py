@@ -205,8 +205,9 @@ class ShenBiFigure:
         else:
             from pyqtgraph.exporters import ImageExporter
             exporter = ImageExporter(self._window.scene())
+            dpi_val = dpi or self._dpi
             exporter.parameters()['width'] = max(
-                int(self._window.size().width() * (dpi or self._dpi) / 100),
+                int(self._window.size().width() * dpi_val / 100),
                 100
             )
 
