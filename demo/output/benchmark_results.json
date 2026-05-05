@@ -1,0 +1,82 @@
+{
+  "Line Plot": {
+    "1000": {
+      "matplotlib": 0.0413,
+      "pyqtgraph": 0.0292,
+      "shenbi": 0.0337,
+      "speedup": "1.2\u00d7"
+    },
+    "10000": {
+      "matplotlib": 0.0412,
+      "pyqtgraph": 0.0312,
+      "shenbi": 0.0361,
+      "speedup": "1.1\u00d7"
+    },
+    "100000": {
+      "matplotlib": 0.0567,
+      "pyqtgraph": 0.0424,
+      "shenbi": 0.0479,
+      "speedup": "1.2\u00d7"
+    }
+  },
+  "Scatter": {
+    "1000": {
+      "matplotlib": 0.0398,
+      "pyqtgraph": 0.0373,
+      "shenbi": 0.0447,
+      "speedup": "0.9\u00d7"
+    },
+    "10000": {
+      "matplotlib": 0.0749,
+      "pyqtgraph": 0.1445,
+      "shenbi": 0.1205,
+      "speedup": "0.6\u00d7"
+    },
+    "100000": {
+      "matplotlib": 0.3764,
+      "pyqtgraph": 1.1281,
+      "shenbi": 0.8295,
+      "speedup": "0.5\u00d7"
+    }
+  },
+  "Bar Chart": {
+    "1000": {
+      "matplotlib": 0.1094,
+      "pyqtgraph": 0.055,
+      "shenbi": 0.0635,
+      "speedup": "1.7\u00d7"
+    },
+    "10000": {
+      "matplotlib": 0.2112,
+      "pyqtgraph": 0.0845,
+      "shenbi": 0.0943,
+      "speedup": "2.2\u00d7"
+    },
+    "100000": {
+      "matplotlib": 0.221,
+      "pyqtgraph": 0.0874,
+      "shenbi": 0.1175,
+      "speedup": "1.9\u00d7"
+    }
+  },
+  "Histogram": {
+    "1000": {
+      "matplotlib": 0.0739,
+      "pyqtgraph": 0.0358,
+      "shenbi": 0.0456,
+      "speedup": "1.6\u00d7"
+    },
+    "10000": {
+      "matplotlib": 0.0751,
+      "pyqtgraph": 0.0313,
+      "shenbi": 0.0487,
+      "speedup": "1.5\u00d7"
+    },
+    "100000": {
+      "matplotlib": 0.0734,
+      "pyqtgraph": 0.0417,
+      "shenbi": 0.0518,
+      "speedup": "1.4\u00d7"
+    }
+  }
+}
