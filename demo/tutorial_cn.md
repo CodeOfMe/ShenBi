@@ -138,6 +138,8 @@ plt.legend()
 plt.savefig('ds01_iris_sepal.png')
 plt.close()
 ```
+![Iris — 萼片长度 vs 萼片宽度](output/ds01_iris_sepal.png)
+
 
 **关键点**：`plt.scatter()` 支持 `edgecolors` 和 `linewidths` 参数，`alpha` 控制透明度。
 
@@ -158,6 +160,8 @@ plt.colorbar(scatter, label='物种')
 plt.savefig('ds02_iris_petal_cmap.png')
 plt.close()
 ```
+![Iris — 花瓣长度 vs 花瓣宽度 (Colormap)](output/ds02_iris_petal_cmap.png)
+
 
 **关键点**：`c=y` 传入数值数组时自动使用 colormap，`plt.colorbar()` 添加颜色条。
 
@@ -179,6 +183,8 @@ plt.tight_layout()
 plt.savefig('ds03_iris_boxplot.png')
 plt.close()
 ```
+![Iris — 各物种特征分布箱线图](output/ds03_iris_boxplot.png)
+
 
 **关键点**：`boxplot()` 接受列表形式的多组数据，自动计算四分位数和异常值。
 
@@ -201,6 +207,8 @@ plt.legend()
 plt.savefig('ds04_iris_hist.png')
 plt.close()
 ```
+![Iris — 花瓣长度分布直方图](output/ds04_iris_hist.png)
+
 
 **关键点**：`alpha=0.5` 使重叠区域可见，`edgecolor='white'` 增加柱间分隔。
 
@@ -226,6 +234,8 @@ plt.legend()
 plt.savefig('ds05_iris_bar.png')
 plt.close()
 ```
+![Iris — 各物种特征均值柱状图](output/ds05_iris_bar.png)
+
 
 **关键点**：分组柱状图通过偏移 x 位置实现，`rotation=45` 旋转标签。
 
@@ -254,6 +264,8 @@ plt.legend()
 plt.savefig('ds06_wine_bar.png')
 plt.close()
 ```
+![Wine — 各类别特征均值](output/ds06_wine_bar.png)
+
 
 ---
 
@@ -277,6 +289,8 @@ plt.legend()
 plt.savefig('ds07_wine_errorbar.png')
 plt.close()
 ```
+![Wine — 误差棒散点图](output/ds07_wine_errorbar.png)
+
 
 **关键点**：`plt.errorbar()` 支持 `xerr` 和 `yerr`，`capsize` 控制误差棒端帽宽度。
 
@@ -306,6 +320,8 @@ plt.legend()
 plt.savefig('ds08_cancer_bar.png')
 plt.close()
 ```
+![乳腺癌 — 恶性 vs 良性特征对比](output/ds08_cancer_bar.png)
+
 
 ---
 
@@ -326,6 +342,8 @@ plt.tight_layout()
 plt.savefig('ds09_cancer_boxplot.png')
 plt.close()
 ```
+![乳腺癌 — 诊断特征分布箱线图](output/ds09_cancer_boxplot.png)
+
 
 ---
 
@@ -348,6 +366,8 @@ plt.tight_layout()
 plt.savefig('ds10_digits_images.png')
 plt.close()
 ```
+![Digits — 手写数字样本图片](output/ds10_digits_images.png)
+
 
 **关键点**：`plt.imshow()` 支持 `cmap` 参数，`ax.axis('off')` 隐藏坐标轴。
 
@@ -371,6 +391,8 @@ plt.legend(title='数字', fontsize=8)
 plt.savefig('ds11_digits_scatter.png')
 plt.close()
 ```
+![Digits — 特征散点图](output/ds11_digits_scatter.png)
+
 
 ---
 
@@ -392,6 +414,8 @@ plt.legend(fontsize=8)
 plt.savefig('ds12_digits_hist.png')
 plt.close()
 ```
+![Digits — 像素强度分布直方图](output/ds12_digits_hist.png)
+
 
 ---
 
@@ -419,6 +443,8 @@ plt.legend()
 plt.savefig('ds13_diabetes_scatter.png')
 plt.close()
 ```
+![Diabetes — BMI vs 疾病进展](output/ds13_diabetes_scatter.png)
+
 
 **关键点**：`np.polyfit()` + `np.polyval()` 实现简单线性回归。
 
@@ -443,6 +469,8 @@ plt.ylabel('相关系数')
 plt.savefig('ds14_diabetes_corr.png')
 plt.close()
 ```
+![Diabetes — 特征相关系数](output/ds14_diabetes_corr.png)
+
 
 **关键点**：正相关用绿色，负相关用红色，`axhline` 添加零参考线。
 
@@ -475,6 +503,8 @@ plt.tight_layout()
 plt.savefig('ds15_iris_pairwise.png')
 plt.close()
 ```
+![Iris — 特征散点矩阵](output/ds15_iris_pairwise.png)
+
 
 ---
 
@@ -496,6 +526,8 @@ plt.legend()
 plt.savefig('ds16_iris_cdf.png')
 plt.close()
 ```
+![Iris — 花瓣长度累积分布](output/ds16_iris_cdf.png)
+
 
 ---
 
@@ -521,6 +553,8 @@ plt.legend(fontsize=8)
 plt.savefig('ds17_wine_stacked.png')
 plt.close()
 ```
+![Wine — 特征贡献堆叠图](output/ds17_wine_stacked.png)
+
 
 **关键点**：`bottom` 参数实现堆叠效果。
 
@@ -552,6 +586,8 @@ plt.tight_layout()
 plt.savefig('ds18_dataset_overview.png')
 plt.close()
 ```
+![多数据集概览对比](output/ds18_dataset_overview.png)
+
 
 ---
 
@@ -573,6 +609,8 @@ plt.legend()
 plt.savefig('ds19_iris_profiles.png')
 plt.close()
 ```
+![Iris — 各物种特征均值曲线](output/ds19_iris_profiles.png)
+
 
 ---
 
@@ -597,6 +635,8 @@ plt.legend()
 plt.savefig('ds20_iris_confidence.png')
 plt.close()
 ```
+![Iris — 花瓣长度 vs 宽度（含置信带）](output/ds20_iris_confidence.png)
+
 
 **关键点**：`plt.fill_between()` 填充两条曲线之间的区域。
 
@@ -643,6 +683,8 @@ plt.legend()
 plt.savefig('ds3d_01_iris_3d.png')
 plt.close()
 ```
+![Iris 3D — 散点投影](output/ds3d_01_iris_3d.png)
+
 
 ---
 
@@ -663,6 +705,8 @@ plt.colorbar(scatter, label='物种')
 plt.savefig('ds3d_02_iris_3d_cmap.png')
 plt.close()
 ```
+![Iris 3D — Colormap 散点](output/ds3d_02_iris_3d_cmap.png)
+
 
 ---
 
@@ -683,6 +727,8 @@ plt.legend()
 plt.savefig('ds3d_03_wine_3d.png')
 plt.close()
 ```
+![Wine 3D — 散点投影](output/ds3d_03_wine_3d.png)
+
 
 ---
 
@@ -703,6 +749,8 @@ plt.legend()
 plt.savefig('ds3d_04_cancer_3d.png')
 plt.close()
 ```
+![乳腺癌 3D — 散点投影](output/ds3d_04_cancer_3d.png)
+
 
 ---
 
@@ -731,6 +779,8 @@ plt.xlabel('萼片长度'); plt.ylabel('萼片宽度')
 plt.savefig('ds3d_05_iris_kde.png')
 plt.close()
 ```
+![Iris — KDE 密度曲面](output/ds3d_05_iris_kde.png)
+
 
 **关键点**：`plt.contourf()` 填充等高线，`plt.contour()` 叠加等高线。
 
@@ -756,6 +806,8 @@ plt.xlabel('花瓣长度'); plt.ylabel('花瓣宽度')
 plt.savefig('ds3d_06_iris_wireframe.png')
 plt.close()
 ```
+![Iris — 线框图 + 数据点](output/ds3d_06_iris_wireframe.png)
+
 
 ---
 
@@ -787,6 +839,8 @@ plt.tight_layout()
 plt.savefig('ds3d_07_multi_3d.png')
 plt.close()
 ```
+![多数据集 3D 对比](output/ds3d_07_multi_3d.png)
+
 
 ---
 
@@ -819,6 +873,8 @@ plt.ylabel('均值')
 plt.savefig('ds3d_08_iris_3d_bar.png')
 plt.close()
 ```
+![Iris — 3D 柱状图](output/ds3d_08_iris_3d_bar.png)
+
 
 ---
 
@@ -850,6 +906,8 @@ plt.legend()
 plt.savefig('ds3d_09_iris_trajectory.png')
 plt.close()
 ```
+![Iris — 3D 物种轨迹](output/ds3d_09_iris_trajectory.png)
+
 
 ---
 
@@ -878,6 +936,8 @@ plt.tight_layout()
 plt.savefig('ds3d_10_iris_volume.png')
 plt.close()
 ```
+![Iris — 3D 密度切片](output/ds3d_10_iris_volume.png)
+
 
 ---
 

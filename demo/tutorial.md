@@ -1,33 +1,38 @@
-# ShenBi (神笔) 完整教程
+# ShenBi (神笔) Complete Tutorial
 
-> matplotlib 的语法 + pyqtgraph 的性能 = 神笔
+> matplotlib syntax + pyqtgraph performance = ShenBi
 
-ShenBi 是一个 Python 可视化库，提供与 matplotlib 完全兼容的 API，底层使用 pyqtgraph 进行高性能渲染。你可以将 `import matplotlib.pyplot as plt` 直接替换为 `import shenbi.pyplot as plt`，无需修改任何绘图代码。
+ShenBi is a Python visualization library providing a fully matplotlib-compatible API,
+powered by pyqtgraph's high-performance rendering engine. Simply replace
+`import matplotlib.pyplot as plt` with `import shenbi.pyplot as plt`
+— no other code changes needed.
 
-## 目录
+[中文教程](tutorial_cn.md)
 
-- [快速开始](#快速开始)
-- [核心概念](#核心概念)
-- [2D 数据集可视化（20 个示例）](#2d-数据集可视化)
-- [3D 数据投影可视化（10 个示例）](#3d-数据投影可视化)
-- [API 参考](#api-参考)
-- [性能对比](#性能对比)
+## Table of Contents
+
+- [Quick Start](#quick-start)
+- [Core Concepts](#core-concepts)
+- [2D Dataset Visualization (20 Examples)](#2d-dataset-visualization)
+- [3D Data Projection Visualization (10 Examples)](#3d-data-projection-visualization)
+- [API Reference](#api-reference)
+- [Performance Comparison](#performance-comparison)
 
 ---
 
-## 快速开始
+## Quick Start
 
-### 安装
+### Installation
 
 ```bash
 pip install shenbi
-# 或使用开发模式
+# or development mode
 git clone https://github.com/CodeOfMe/ShenBi.git
 cd ShenBi
 pip install -e .
 ```
 
-### 第一个图
+### First Plot
 
 ```python
 import shenbi.pyplot as plt
@@ -45,57 +50,57 @@ plt.savefig('first_plot.png')
 plt.close()
 ```
 
-### 与 matplotlib 切换
+### Switching from matplotlib
 
 ```python
-# 只需改一行 import，其余代码完全不变
-# import matplotlib.pyplot as plt   ← 原来
-import shenbi.pyplot as plt          # ← 现在
+# Just change one line — everything else stays the same
+# import matplotlib.pyplot as plt   ← old
+import shenbi.pyplot as plt          # ← new
 ```
 
 ---
 
-## 核心概念
+## Core Concepts
 
-### 默认样式
+### Default Styling
 
-- **白色背景**：所有图表默认白色背景（与 matplotlib 一致）
-- **无网格**：默认不显示网格，需要时调用 `plt.grid(True)`
-- **Tab10 配色**：自动循环使用 matplotlib 的 tab10 颜色
+- **White background** — all plots use white background (matching matplotlib)
+- **No grid** — grid is OFF by default; call `plt.grid(True)` to enable
+- **Tab10 colours** — automatic tab10 colour cycling
 
-### 颜色系统
+### Color System
 
 ```python
 from shenbi.colors import TAB10_COLORS, resolve_color
 from shenbi.cm import get_cmap
 
-# 基础颜色
-plt.plot(x, y, 'r-')           # 单字母
-plt.plot(x, y, color='steelblue')  # CSS4 名称
-plt.plot(x, y, color='#1f77b4')    # 十六进制
+# Basic colours
+plt.plot(x, y, 'r-')                   # single letter
+plt.plot(x, y, color='steelblue')       # CSS4 name
+plt.plot(x, y, color='#1f77b4')         # hex
 
-# Colormap
+# Colormaps
 cmap = get_cmap('viridis')
-colors = cmap(np.linspace(0, 1, 10))  # 返回 RGBA 数组
+colours = cmap(np.linspace(0, 1, 10))   # returns RGBA array
 ```
 
-### 支持的 Colormap
+### Supported Colormaps
 
-| 类别 | 名称 |
-|------|------|
-| 感知均匀 | `viridis`, `plasma`, `inferno`, `magma`, `cividis` |
-| 发散 | `coolwarm`, `bwr`, `seismic` |
-| 顺序 | `Blues`, `Reds`, `Greens`, `Oranges`, `Purples`, `Greys` |
-| 循环 | `twilight`, `twilight_shifted` |
-| 经典 | `jet`, `cool`, `hot`, `spring`, `summer`, `autumn`, `winter` |
+| Category | Names |
+|----------|-------|
+| Perceptually Uniform | `viridis`, `plasma`, `inferno`, `magma`, `cividis` |
+| Diverging | `coolwarm`, `bwr`, `seismic` |
+| Sequential | `Blues`, `Reds`, `Greens`, `Oranges`, `Purples`, `Greys` |
+| Cyclic | `twilight`, `twilight_shifted` |
+| Classic | `jet`, `cool`, `hot`, `spring`, `summer`, `autumn`, `winter` |
 
 ---
 
-## 2D 数据集可视化
+## 2D Dataset Visualization
 
-本教程使用 5 个标准数据集演示所有绘图能力。所有示例均可直接运行。
+This tutorial uses 5 standard datasets. Each example is fully self-contained and runnable.
 
-### 数据集加载
+### Loading Datasets
 
 ```python
 import numpy as np
@@ -103,7 +108,6 @@ import shenbi.pyplot as plt
 from shenbi.colors import TAB10_COLORS
 from shenbi.cm import get_cmap
 
-# 使用 sklearn 数据集（或内置回退数据）
 from sklearn.datasets import load_iris, load_wine, load_breast_cancer, load_digits, load_diabetes
 
 iris = load_iris()
@@ -115,9 +119,9 @@ diabetes = load_diabetes()
 
 ---
 
-### 示例 1：Iris 散点图（按物种着色）
+### Example 1: Iris Scatter by Species
 
-展示鸢尾花萼片长度与宽度的关系，三种物种用不同颜色区分。
+Sepal length vs sepal width, coloured by species.
 
 ```python
 X, y = iris.data, iris.target
@@ -137,13 +141,15 @@ plt.savefig('ds01_iris_sepal.png')
 plt.close()
 ```
 
-**关键点**：`plt.scatter()` 支持 `edgecolors` 和 `linewidths` 参数，`alpha` 控制透明度。
+![Iris — Sepal Length vs Sepal Width](output/ds01_iris_sepal.png)
+
+**Key point**: `plt.scatter()` supports `edgecolors` and `linewidths`. `alpha` controls opacity.
 
 ---
 
-### 示例 2：Iris 散点图（Colormap 映射）
+### Example 2: Iris Scatter with Colormap
 
-将物种标签映射到 viridis 颜色映射。
+Mapping species labels to the viridis colormap.
 
 ```python
 plt.figure(figsize=(8, 6))
@@ -157,13 +163,15 @@ plt.savefig('ds02_iris_petal_cmap.png')
 plt.close()
 ```
 
-**关键点**：`c=y` 传入数值数组时自动使用 colormap，`plt.colorbar()` 添加颜色条。
+![Iris — Petal Length vs Petal Width (Colormap)](output/ds02_iris_petal_cmap.png)
+
+**Key point**: Passing `c=y` (numeric array) auto-applies the colormap. `plt.colorbar()` adds a colour bar.
 
 ---
 
-### 示例 3：Iris 箱线图
+### Example 3: Iris Boxplots
 
-展示每个物种在 4 个特征上的分布。
+Feature distributions across the three species.
 
 ```python
 fig, axes = plt.subplots(2, 2, figsize=(14, 10))
@@ -178,13 +186,15 @@ plt.savefig('ds03_iris_boxplot.png')
 plt.close()
 ```
 
-**关键点**：`boxplot()` 接受列表形式的多组数据，自动计算四分位数和异常值。
+![Iris — Feature Boxplots by Species](output/ds03_iris_boxplot.png)
+
+**Key point**: `boxplot()` accepts a list of groups and auto-computes quartiles & outliers.
 
 ---
 
-### 示例 4：Iris 直方图叠加
+### Example 4: Iris Histogram Overlay
 
-按物种叠加花瓣长度的分布直方图。
+Overlaid petal-length histograms by species.
 
 ```python
 plt.figure(figsize=(10, 6))
@@ -200,13 +210,15 @@ plt.savefig('ds04_iris_hist.png')
 plt.close()
 ```
 
-**关键点**：`alpha=0.5` 使重叠区域可见，`edgecolor='white'` 增加柱间分隔。
+![Iris — Petal Length Distribution](output/ds04_iris_hist.png)
+
+**Key point**: `alpha=0.5` makes overlaps visible. `edgecolor='white'` adds bar separation.
 
 ---
 
-### 示例 5：Iris 柱状图（均值对比）
+### Example 5: Iris Grouped Bar Chart
 
-对比三个物种在各特征上的均值。
+Mean feature values per species.
 
 ```python
 means = np.array([X[y == i].mean(axis=0) for i in range(3)])
@@ -225,13 +237,16 @@ plt.savefig('ds05_iris_bar.png')
 plt.close()
 ```
 
-**关键点**：分组柱状图通过偏移 x 位置实现，`rotation=45` 旋转标签。
+![Iris — Mean Feature Values](output/ds05_iris_bar.png)
+
+**Key point**: Grouped bars via x-position offset. `rotation=45` rotates labels.
+
 
 ---
 
-### 示例 6：Wine 柱状图
+### Example 6: Wine Bar Chart
 
-展示葡萄酒数据集前 6 个特征在 3 个类别上的均值。
+Mean values of first 6 features across 3 wine classes.
 
 ```python
 wine_data, wine_y = wine.data, wine.target
@@ -253,11 +268,14 @@ plt.savefig('ds06_wine_bar.png')
 plt.close()
 ```
 
+![Wine — Mean Feature Values](output/ds06_wine_bar.png)
+
+
 ---
 
-### 示例 7：Wine 误差棒散点
+### Example 7: Wine Error Bar Scatter
 
-展示每个类别在两个特征上的均值 ± 标准差。
+Mean ± std for two features per wine class.
 
 ```python
 plt.figure(figsize=(8, 6))
@@ -276,13 +294,15 @@ plt.savefig('ds07_wine_errorbar.png')
 plt.close()
 ```
 
-**关键点**：`plt.errorbar()` 支持 `xerr` 和 `yerr`，`capsize` 控制误差棒端帽宽度。
+![Wine — Error Bar Scatter](output/ds07_wine_errorbar.png)
+
+**Key point**: **Key point**: `plt.errorbar()` supports `xerr` and `yerr`. `capsize` controls cap width.
 
 ---
 
-### 示例 8：乳腺癌特征对比柱状图
+### Example 8: Breast Cancer Feature Comparison
 
-对比恶性与良性肿瘤在前 10 个特征上的均值差异。
+Malignant vs benign — mean of first 10 features.
 
 ```python
 cancer_data, cancer_y = cancer.data, cancer.target
@@ -305,11 +325,14 @@ plt.savefig('ds08_cancer_bar.png')
 plt.close()
 ```
 
+![Breast Cancer — Malignant vs Benign](output/ds08_cancer_bar.png)
+
+
 ---
 
-### 示例 9：乳腺癌箱线图
+### Example 9: Breast Cancer Boxplots
 
-展示 5 个关键特征在恶性/良性上的分布差异。
+5 key features across malignant/benign.
 
 ```python
 fig, axes = plt.subplots(1, 5, figsize=(16, 5))
@@ -325,11 +348,14 @@ plt.savefig('ds09_cancer_boxplot.png')
 plt.close()
 ```
 
+![Breast Cancer — Feature Boxplots](output/ds09_cancer_boxplot.png)
+
+
 ---
 
-### 示例 10：Digits 图片展示
+### Example 10: Digits Image Display
 
-展示手写数字数据集的样本图片（8×8 像素）。
+15 sample digit images (8×8 pixels).
 
 ```python
 digits_images = digits.images
@@ -339,7 +365,7 @@ fig, axes = plt.subplots(3, 5, figsize=(12, 8))
 axes = axes.flatten()
 for i, ax in enumerate(axes):
     ax.imshow(digits_images[i], cmap='Greys', vmin=0, vmax=16)
-    ax.set_title(f'Digit: {digits_y[i]}')
+    ax.set_title(f'Digit: {{digits_y[i]}}')
     ax.axis('off')
 plt.suptitle('Digits — Sample Images (8×8 pixels)')
 plt.tight_layout()
@@ -347,15 +373,18 @@ plt.savefig('ds10_digits_images.png')
 plt.close()
 ```
 
-**关键点**：`plt.imshow()` 支持 `cmap` 参数，`ax.axis('off')` 隐藏坐标轴。
+![Digits — Sample Images](output/ds10_digits_images.png)
+
+**Key point**: **Key point**: `plt.imshow()` with `cmap`. `ax.axis('off')` hides axes.
 
 ---
 
-### 示例 11：Digits 特征散点
+### Example 11: Digits Feature Scatter
 
-按数字类别着色展示前两个特征的分布。
+First two features coloured by digit class.
 
 ```python
+digits_data = digits.data
 plt.figure(figsize=(8, 6))
 for digit in range(10):
     mask = digits_y == digit
@@ -370,11 +399,14 @@ plt.savefig('ds11_digits_scatter.png')
 plt.close()
 ```
 
+![Digits — Feature Scatter](output/ds11_digits_scatter.png)
+
+
 ---
 
-### 示例 12：Digits 像素强度直方图
+### Example 12: Digits Pixel Histogram
 
-展示不同数字的像素强度分布差异。
+Pixel intensity distributions for every other digit.
 
 ```python
 plt.figure(figsize=(10, 6))
@@ -382,20 +414,23 @@ for digit in range(0, 10, 2):
     mask = digits_y == digit
     pixels = digits_data[mask].flatten()
     plt.hist(pixels, bins=32, alpha=0.4, color=TAB10_COLORS[digit],
-             edgecolor='white', linewidth=0.3, label=f'Digit {digit}')
+             edgecolor='white', linewidth=0.3, label=f'Digit {{digit}}')
 plt.title('Digits — Pixel Intensity Distribution')
-plt.xlabel('Pixel Value (0-16)')
+plt.xlabel('Pixel Value (0–16)')
 plt.ylabel('Count')
 plt.legend(fontsize=8)
 plt.savefig('ds12_digits_hist.png')
 plt.close()
 ```
 
+![Digits — Pixel Histogram](output/ds12_digits_hist.png)
+
+
 ---
 
-### 示例 13：Diabetes 回归散点
+### Example 13: Diabetes Regression Scatter
 
-展示 BMI 与疾病进展的关系，叠加线性拟合线。
+BMI vs disease progression with linear fit.
 
 ```python
 dia_data, dia_target = diabetes.data, diabetes.target
@@ -404,13 +439,14 @@ bmi_idx = 2
 x_bmi, y_target = dia_data[:, bmi_idx], dia_target
 
 coeffs = np.polyfit(x_bmi, y_target, 1)
-x_fit = np.linspace(x_bmi.min(), x_bmi.max(), 100)
+x_fit = np.linspace(min(x_bmi), max(x_bmi), 100)
 y_fit = np.polyval(coeffs, x_fit)
 
 plt.figure(figsize=(10, 6))
 plt.scatter(x_bmi, y_target, s=15, c='#1f77b4', alpha=0.4, edgecolors='none')
-plt.plot(x_fit, y_fit, 'r-', linewidth=2, label=f'y = {coeffs[0]:.1f}x + {coeffs[1]:.0f}')
-plt.title(f'Diabetes — BMI vs Disease Progression')
+plt.plot(x_fit, y_fit, 'r-', linewidth=2,
+         label=f'y = {{coeffs[0]:.1f}}x + {{coeffs[1]:.0f}}')
+plt.title('Diabetes — BMI vs Disease Progression')
 plt.xlabel(dia_feat[bmi_idx])
 plt.ylabel('Disease Progression')
 plt.legend()
@@ -418,13 +454,15 @@ plt.savefig('ds13_diabetes_scatter.png')
 plt.close()
 ```
 
-**关键点**：`np.polyfit()` + `np.polyval()` 实现简单线性回归。
+![Diabetes — BMI vs Disease Progression](output/ds13_diabetes_scatter.png)
+
+**Key point**: **Key point**: `np.polyfit()` + `np.polyval()` for simple linear regression.
 
 ---
 
-### 示例 14：Diabetes 特征相关性
+### Example 14: Diabetes Feature Correlations
 
-展示各特征与目标变量的相关系数。
+Correlation of each feature with the target.
 
 ```python
 correlations = np.array([np.corrcoef(dia_data[:, i], dia_target)[0, 1]
@@ -442,13 +480,15 @@ plt.savefig('ds14_diabetes_corr.png')
 plt.close()
 ```
 
-**关键点**：正相关用绿色，负相关用红色，`axhline` 添加零参考线。
+![Diabetes — Feature Correlations](output/ds14_diabetes_corr.png)
+
+**Key point**: **Key point**: Green = positive correlation, red = negative. `axhline` for the zero line.
 
 ---
 
-### 示例 15：Iris 散点矩阵
+### Example 15: Iris Scatter Matrix
 
-4×4 特征对散点矩阵，对角线为直方图。
+4×4 pairwise feature scatter matrix, histograms on diagonal.
 
 ```python
 fig, axes = plt.subplots(4, 4, figsize=(14, 14))
@@ -474,11 +514,14 @@ plt.savefig('ds15_iris_pairwise.png')
 plt.close()
 ```
 
+![Iris — Pairwise Scatter Matrix](output/ds15_iris_pairwise.png)
+
+
 ---
 
-### 示例 16：Iris 累积分布
+### Example 16: Iris Cumulative Distribution
 
-展示花瓣长度的累积分布函数。
+CDF of petal length by species.
 
 ```python
 plt.figure(figsize=(10, 6))
@@ -488,18 +531,21 @@ for i, name in enumerate(names):
     cumsum = np.arange(1, len(vals) + 1) / len(vals)
     plt.plot(vals, cumsum, color=TAB10_COLORS[i], linewidth=2, label=name)
 plt.title('Iris — Cumulative Distribution of Petal Length')
-plt.xlabel(f'{feat[2]} (cm)')
+plt.xlabel(f'{{feat[2]}} (cm)')
 plt.ylabel('Cumulative Proportion')
 plt.legend()
 plt.savefig('ds16_iris_cdf.png')
 plt.close()
 ```
 
+![Iris — Cumulative Distribution](output/ds16_iris_cdf.png)
+
+
 ---
 
-### 示例 17：Wine 堆叠柱状图
+### Example 17: Wine Stacked Bar
 
-展示各类别在前 5 个特征上的归一化贡献。
+Normalised feature contributions per class.
 
 ```python
 wine_norm = (wine_data[:, :5] - wine_data[:, :5].min(axis=0)) / \
@@ -514,19 +560,21 @@ for j in range(5):
     bottom += wine_class_means[:, j]
 plt.xticks(range(3), wine_names)
 plt.title('Wine — Stacked Feature Contributions')
-plt.ylabel('Normalized Mean')
+plt.ylabel('Normalised Mean')
 plt.legend(fontsize=8)
 plt.savefig('ds17_wine_stacked.png')
 plt.close()
 ```
 
-**关键点**：`bottom` 参数实现堆叠效果。
+![Wine — Stacked Bar](output/ds17_wine_stacked.png)
+
+**Key point**: **Key point**: The `bottom` parameter creates stacking.
 
 ---
 
-### 示例 18：多数据集概览
+### Example 18: Multi-dataset Overview
 
-对比 5 个数据集的样本量、特征数和类别数。
+Comparing samples, features, and classes across 5 datasets.
 
 ```python
 datasets = ['Iris', 'Wine', 'Breast\nCancer', 'Digits', 'Diabetes']
@@ -541,21 +589,24 @@ axes[0].set_xticks(x_pos); axes[0].set_xticklabels(datasets)
 axes[0].set_title('Sample Size')
 axes[1].bar(x_pos, features, color='#2ca02c', edgecolor='white', linewidth=0.5)
 axes[1].set_xticks(x_pos); axes[1].set_xticklabels(datasets)
-axes[1].set_title('Number of Features')
+axes[1].set_title('Features')
 axes[2].bar(x_pos, classes, color='#d62728', edgecolor='white', linewidth=0.5)
 axes[2].set_xticks(x_pos); axes[2].set_xticklabels(datasets)
-axes[2].set_title('Number of Classes')
+axes[2].set_title('Classes')
 plt.suptitle('Dataset Overview Comparison')
 plt.tight_layout()
 plt.savefig('ds18_dataset_overview.png')
 plt.close()
 ```
 
+![Multi-dataset Overview](output/ds18_dataset_overview.png)
+
+
 ---
 
-### 示例 19：Iris 均值曲线
+### Example 19: Iris Mean Profiles
 
-展示各物种在 4 个特征上的均值变化趋势。
+Plotting mean values across the 4 features for each species.
 
 ```python
 means = np.array([iris.data[iris.target == i].mean(axis=0) for i in range(3)])
@@ -572,11 +623,14 @@ plt.savefig('ds19_iris_profiles.png')
 plt.close()
 ```
 
+![Iris — Mean Profiles](output/ds19_iris_profiles.png)
+
+
 ---
 
-### 示例 20：Iris 置信带
+### Example 20: Iris Confidence Bands
 
-展示花瓣长度-宽度关系及 ±1 标准差置信带。
+Petal length vs width with ±1σ bands.
 
 ```python
 plt.figure(figsize=(10, 6))
@@ -589,26 +643,30 @@ for i, name in enumerate(names):
     plt.plot(pl, pw, color=TAB10_COLORS[i], linewidth=1.5, label=name)
     plt.fill_between(pl, pw - std_w, pw + std_w, alpha=0.15, color=TAB10_COLORS[i])
 plt.title('Iris — Petal Length vs Width with Confidence Bands')
-plt.xlabel(f'{feat[2]} (cm)')
-plt.ylabel(f'{feat[3]} (cm)')
+plt.xlabel(f'{{feat[2]}} (cm)')
+plt.ylabel(f'{{feat[3]}} (cm)')
 plt.legend()
 plt.savefig('ds20_iris_confidence.png')
 plt.close()
 ```
 
-**关键点**：`plt.fill_between()` 填充两条曲线之间的区域。
+![Iris — Confidence Bands](output/ds20_iris_confidence.png)
+
+**Key point**: **Key point**: `plt.fill_between()` fills the region between two curves.
+
 
 ---
 
-## 3D 数据投影可视化
+## 3D Data Projection Visualization
 
-由于 macOS Apple Silicon 上 OpenGL 渲染的限制，3D 演示使用 **2D 投影模拟 3D 效果**，在所有平台上均可正常工作。
+Because OpenGL rendering has limitations on Apple Silicon macOS, the 3D demos use
+**2D projection to simulate 3D effects** — works on all platforms.
 
-### 3D 投影原理
+### 3D Projection Math
 
 ```python
 def project_3d(X, Y, Z, azim=-60, elev=30):
-    """将 3D 坐标投影到 2D 平面（透视投影）"""
+    """Project 3D coordinates to 2D with perspective."""
     a, e = np.deg2rad(azim), np.deg2rad(elev)
     x1 = X * np.cos(a) - Y * np.sin(a)
     y1 = X * np.sin(a) + Y * np.cos(a)
@@ -616,15 +674,16 @@ def project_3d(X, Y, Z, azim=-60, elev=30):
     y2 = y1 * np.cos(e) - Z * np.sin(e)
     z2 = y1 * np.sin(e) + Z * np.cos(e)
     d = 10.0
-    p = d / (d - z2 * 0.1)  # 透视因子
+    p = d / (d - z2 * 0.1)  # perspective factor
     return x2 * p, y2 * p, z2
 ```
 
+
 ---
 
-### 示例 3D-1：Iris 3D 散点
+### Example 3D-1: Iris 3D Scatter
 
-将萼片长、宽和花瓣长投影到 2D 平面。
+Sepal length × width × petal length projected to 2D.
 
 ```python
 X, Y, Z = iris.data[:, 0], iris.data[:, 1], iris.data[:, 2]
@@ -642,11 +701,14 @@ plt.savefig('ds3d_01_iris_3d.png')
 plt.close()
 ```
 
+![Iris 3D — Sepal Scatter](output/ds3d_01_iris_3d.png)
+
+
 ---
 
-### 示例 3D-2：Iris 3D Colormap
+### Example 3D-2: Iris 3D Colormap
 
-花瓣测量值的 3D 投影，使用 viridis 颜色映射。
+Petal measurements projected with viridis colormap.
 
 ```python
 X, Y, Z = iris.data[:, 2], iris.data[:, 3], iris.data[:, 0]
@@ -662,9 +724,14 @@ plt.savefig('ds3d_02_iris_3d_cmap.png')
 plt.close()
 ```
 
+![Iris 3D — Petal Colormap](output/ds3d_02_iris_3d_cmap.png)
+
+
 ---
 
-### 示例 3D-3：Wine 3D 散点
+### Example 3D-3: Wine 3D Scatter
+
+
 
 ```python
 X, Y, Z = wine.data[:, 0], wine.data[:, 1], wine.data[:, 2]
@@ -682,9 +749,14 @@ plt.savefig('ds3d_03_wine_3d.png')
 plt.close()
 ```
 
+![Wine 3D Scatter](output/ds3d_03_wine_3d.png)
+
+
 ---
 
-### 示例 3D-4：乳腺癌 3D 散点
+### Example 3D-4: Breast Cancer 3D Scatter
+
+
 
 ```python
 X, Y, Z = cancer.data[:, 0], cancer.data[:, 1], cancer.data[:, 2]
@@ -702,11 +774,14 @@ plt.savefig('ds3d_04_cancer_3d.png')
 plt.close()
 ```
 
+![Breast Cancer 3D Scatter](output/ds3d_04_cancer_3d.png)
+
+
 ---
 
-### 示例 3D-5：Iris KDE 曲面
+### Example 3D-5: Iris KDE Surface
 
-使用高斯核密度估计生成 2D 密度曲面。
+Gaussian KDE density surface.
 
 ```python
 from scipy.stats import gaussian_kde
@@ -730,11 +805,15 @@ plt.savefig('ds3d_05_iris_kde.png')
 plt.close()
 ```
 
-**关键点**：`plt.contourf()` 填充等高线，`plt.contour()` 叠加等高线。
+![Iris — KDE Surface](output/ds3d_05_iris_kde.png)
+
+**Key point**: **Key point**: `plt.contourf()` for filled contours, `plt.contour()` for contour lines.
 
 ---
 
-### 示例 3D-6：Iris 线框图
+### Example 3D-6: Iris Wireframe + Data
+
+Wireframe mesh with scattered data points.
 
 ```python
 x = np.linspace(iris.data[:, 2].min(), iris.data[:, 2].max(), 30)
@@ -755,9 +834,14 @@ plt.savefig('ds3d_06_iris_wireframe.png')
 plt.close()
 ```
 
+![Iris — Wireframe + Data](output/ds3d_06_iris_wireframe.png)
+
+
 ---
 
-### 示例 3D-7：多数据集 3D 对比
+### Example 3D-7: Multi-dataset 3D Comparison
+
+Side-by-side 3D projection of Iris, Wine, Cancer.
 
 ```python
 fig, axes = plt.subplots(1, 3, figsize=(18, 6))
@@ -786,11 +870,14 @@ plt.savefig('ds3d_07_multi_3d.png')
 plt.close()
 ```
 
+![Multi-dataset 3D Comparison](output/ds3d_07_multi_3d.png)
+
+
 ---
 
-### 示例 3D-8：Iris 3D 柱状图
+### Example 3D-8: Iris 3D Bar Chart
 
-使用透视多边形模拟 3D 柱状效果。
+Pseudo-3D bars built from filled polygons.
 
 ```python
 means = np.array([iris.data[iris.target == i].mean(axis=0) for i in range(3)])
@@ -809,8 +896,7 @@ for i, name in enumerate(iris.target_names):
         front_y = [i*0.5-h*0.15, i*0.5-h*0.15, i*0.5, i*0.5]
         plt.fill(front_x, front_y, color=TAB10_COLORS[i], alpha=0.6,
                  edgecolor='white', linewidth=0.3)
-plt.xlim(-0.5, 4.5)
-plt.ylim(-2, 1.5)
+plt.xlim(-0.5, 4.5); plt.ylim(-2, 1.5)
 plt.xticks(x_pos + width*1.5, iris.feature_names, rotation=45, ha='right')
 plt.title('Iris — 3D Bar Chart (Mean Feature Values)')
 plt.ylabel('Mean Value')
@@ -818,11 +904,14 @@ plt.savefig('ds3d_08_iris_3d_bar.png')
 plt.close()
 ```
 
+![Iris — 3D Bar Chart](output/ds3d_08_iris_3d_bar.png)
+
+
 ---
 
-### 示例 3D-9：Iris 物种轨迹
+### Example 3D-9: Iris 3D Trajectory
 
-通过二次插值在物种均值之间生成平滑轨迹。
+Smooth quadratic interpolation through species means.
 
 ```python
 from scipy.interpolate import interp1d
@@ -849,11 +938,14 @@ plt.savefig('ds3d_09_iris_trajectory.png')
 plt.close()
 ```
 
+![Iris — 3D Trajectory](output/ds3d_09_iris_trajectory.png)
+
+
 ---
 
-### 示例 3D-10：Iris 密度切片
+### Example 3D-10: Iris Density Slices
 
-在不同花瓣长度处切片展示 3D 密度分布。
+3D density sliced at different petal lengths.
 
 ```python
 from scipy.stats import gaussian_kde
@@ -866,9 +958,10 @@ for idx, z_val in enumerate(z_levels):
     x_grid = np.linspace(4, 8, 40)
     y_grid = np.linspace(2, 4.5, 40)
     Xg, Yg = np.meshgrid(x_grid, y_grid)
-    Zg = kde(np.vstack([Xg.ravel(), Yg.ravel(), np.full_like(Xg.ravel(), z_val)])).reshape(Xg.shape)
+    Zg = kde(np.vstack([Xg.ravel(), Yg.ravel(),
+          np.full_like(Xg.ravel(), z_val)])).reshape(Xg.shape)
     axes[idx].contourf(Xg, Yg, Zg, levels=15, cmap='viridis', alpha=0.8)
-    axes[idx].set_title(f'Petal Length = {z_val:.1f} cm')
+    axes[idx].set_title(f'Petal Length = {{z_val:.1f}} cm')
     axes[idx].set_xlabel('Sepal Length')
     axes[idx].set_ylabel('Sepal Width')
 plt.suptitle('Iris — 3D Density Slices at Different Petal Lengths')
@@ -877,106 +970,102 @@ plt.savefig('ds3d_10_iris_volume.png')
 plt.close()
 ```
 
+![Iris — Density Slices](output/ds3d_10_iris_volume.png)
+
+
+
 ---
 
-## API 参考
+## API Reference
 
-### pyplot 函数
+### Pyplot Functions
 
-| 函数 | 说明 |
-|------|------|
-| `plt.figure(figsize)` | 创建新图形 |
-| `plt.subplots(nrows, ncols)` | 创建子图网格 |
-| `plt.plot(x, y, fmt, **kwargs)` | 线图 |
-| `plt.scatter(x, y, s, c, cmap, **kwargs)` | 散点图 |
-| `plt.bar(x, height, **kwargs)` | 柱状图 |
-| `plt.barh(y, width, **kwargs)` | 水平柱状图 |
-| `plt.hist(x, bins, **kwargs)` | 直方图 |
-| `plt.errorbar(x, y, xerr, yerr, **kwargs)` | 误差棒图 |
-| `plt.fill_between(x, y1, y2, **kwargs)` | 填充区域 |
-| `plt.contour(X, Y, Z, **kwargs)` | 等高线 |
-| `plt.contourf(X, Y, Z, **kwargs)` | 填充等高线 |
-| `plt.imshow(X, cmap, **kwargs)` | 图像显示 |
-| `plt.boxplot(data, **kwargs)` | 箱线图 |
-| `plt.pie(sizes, **kwargs)` | 饼图 |
-| `plt.stem(x, y, **kwargs)` | 茎叶图 |
-| `plt.step(x, y, **kwargs)` | 阶梯图 |
-| `plt.axhline(y, **kwargs)` | 水平参考线 |
-| `plt.axvline(x, **kwargs)` | 垂直参考线 |
-| `plt.text(x, y, s, **kwargs)` | 添加文本 |
-| `plt.annotate(text, xy, **kwargs)` | 添加标注 |
-| `plt.title(label)` | 设置标题 |
-| `plt.xlabel(label)` | 设置 x 标签 |
-| `plt.ylabel(label)` | 设置 y 标签 |
-| `plt.legend()` | 添加图例 |
-| `plt.grid(visible)` | 显示/隐藏网格 |
-| `plt.xlim(left, right)` | 设置 x 范围 |
-| `plt.ylim(bottom, top)` | 设置 y 范围 |
-| `plt.xscale(value)` | 设置 x 缩放 |
-| `plt.yscale(value)` | 设置 y 缩放 |
-| `plt.savefig(fname)` | 保存图形 |
-| `plt.show()` | 显示图形 |
-| `plt.close()` | 关闭图形 |
-| `plt.fill(x, y, **kwargs)` | 多边形填充 |
-| `plt.colorbar(mappable)` | 添加颜色条 |
+| Function | Description |
+|----------|-------------|
+| `plt.figure(figsize)` | Create a new figure |
+| `plt.subplots(nrows, ncols)` | Create a subplot grid |
+| `plt.plot(x, y, fmt, **kw)` | Line plot |
+| `plt.scatter(x, y, s, c, cmap, **kw)` | Scatter plot |
+| `plt.bar(x, h, **kw)` | Bar chart |
+| `plt.barh(y, w, **kw)` | Horizontal bar chart |
+| `plt.hist(x, bins, **kw)` | Histogram |
+| `plt.errorbar(x, y, xerr, yerr, **kw)` | Error bar plot |
+| `plt.fill_between(x, y1, y2, **kw)` | Fill between curves |
+| `plt.contour(X, Y, Z, **kw)` | Contour lines |
+| `plt.contourf(X, Y, Z, **kw)` | Filled contours |
+| `plt.imshow(X, cmap, **kw)` | Image display |
+| `plt.boxplot(data, **kw)` | Box and whisker plot |
+| `plt.pie(sizes, **kw)` | Pie chart |
+| `plt.stem(x, y, **kw)` | Stem plot |
+| `plt.step(x, y, **kw)` | Step plot |
+| `plt.axhline(y, **kw)` | Horizontal reference line |
+| `plt.axvline(x, **kw)` | Vertical reference line |
+| `plt.text(x, y, s, **kw)` | Add text |
+| `plt.annotate(text, xy, **kw)` | Add annotation |
+| `plt.title(label)` | Set title |
+| `plt.xlabel(label)` | X-axis label |
+| `plt.ylabel(label)` | Y-axis label |
+| `plt.legend()` | Add legend |
+| `plt.grid(visible)` | Toggle grid |
+| `plt.xlim(a, b)`, `plt.ylim(a, b)` | Set axis limits |
+| `plt.xscale(s)`, `plt.yscale(s)` | Set axis scale |
+| `plt.savefig(fname)` | Save figure |
+| `plt.fill(x, y, **kw)` | Fill polygon |
+| `plt.colorbar(mappable)` | Add colour bar |
 
-### Axes 方法
+### Axes Methods
 
-| 方法 | 说明 |
-|------|------|
-| `ax.plot(...)`, `ax.scatter(...)`, ... | 所有 pyplot 函数均有对应的 axes 方法 |
-| `ax.set_title()`, `ax.set_xlabel()`, ... | 设置标签 |
-| `ax.set_xlim()`, `ax.set_ylim()` | 设置范围 |
-| `ax.set_xticks()`, `ax.set_yticks()` | 设置刻度 |
-| `ax.set_xticklabels()`, `ax.set_yticklabels()` | 设置刻度标签 |
-| `ax.twinx()`, `ax.twiny()` | 创建双轴 |
-| `ax.grid()`, `ax.legend()` | 网格/图例 |
-| `ax.axis('off')` | 隐藏坐标轴 |
-| `ax.add_patch(polygon)` | 添加 patch |
-| `ax.boxplot()`, `ax.bar()`, ... | 所有绘图方法 |
+| Method | Description |
+|--------|-------------|
+| `ax.plot(...)` etc. | All plotting methods available on axes |
+| `ax.set_title()`, `ax.set_xlabel()`, etc. | Labels |
+| `ax.set_xlim()`, `ax.set_ylim()` | Limits |
+| `ax.set_xticks()`, `ax.set_yticks()` | Tick positions |
+| `ax.set_xticklabels()`, `ax.set_yticklabels()` | Tick labels |
+| `ax.twinx()`, `ax.twiny()` | Create twin axes |
+| `ax.axis('off')` | Hide axes |
+| `ax.add_patch(polygon)` | Add a patch |
 
-### 颜色系统
+### Colour System
 
 ```python
 from shenbi.colors import TAB10_COLORS, resolve_color
 from shenbi.cm import get_cmap, Colormap
 
-# 解析颜色
 rgba = resolve_color('steelblue')      # → (70, 130, 180, 255)
 rgba = resolve_color('#FF0000')        # → (255, 0, 0, 255)
 rgba = resolve_color((1.0, 0.5, 0.0))  # → (255, 127, 0, 255)
 rgba = resolve_color('r', alpha=0.5)   # → (214, 39, 40, 127)
 
-# Colormap
 cmap = get_cmap('viridis')
-colors = cmap(np.linspace(0, 1, 10))  # → (N, 4) RGBA 数组
+colours = cmap(np.linspace(0, 1, 10))  # → (N, 4) RGBA array
 
-# 访问方式
-plt.cm.viridis          # 模块属性
-plt.cm.get_cmap('jet')  # 函数调用
+plt.cm.viridis          # module attribute
+plt.cm.get_cmap('jet')  # function call
 ```
 
 ---
 
-## 性能对比
+## Performance Comparison
 
-| 数据量 | matplotlib 渲染时间 | ShenBi (pyqtgraph) 渲染时间 |
-|--------|-------------------|---------------------------|
-| 1,000 点 | ~0.05s | ~0.003s |
-| 10,000 点 | ~0.15s | ~0.005s |
-| 100,000 点 | ~1.2s | ~0.04s |
-| 1,000,000 点 | ~12s | ~0.3s |
+| Data Size | matplotlib Render Time | ShenBi (pyqtgraph) Render Time |
+|-----------|----------------------|-------------------------------|
+| 1,000 pts | ~0.05s | ~0.003s |
+| 10,000 pts | ~0.15s | ~0.005s |
+| 100,000 pts | ~1.2s | ~0.04s |
+| 1,000,000 pts | ~12s | ~0.3s |
 
-ShenBi 在大数据量下比 matplotlib 快 **20-40 倍**，这得益于 pyqtgraph 的 OpenGL 加速和自动降采样。
+ShenBi is **20–40× faster** than matplotlib on large datasets, thanks to pyqtgraph's
+OpenGL acceleration and automatic downsampling.
 
 ---
 
-## 运行所有演示
+## Running the Demos
 
 ```bash
 cd demo
-python demo_pyqtgraph_2d.py   # 20 个 2D 数据集演示
-python demo_pyqtgraph_3d.py   # 10 个 3D 投影演示
+python demo_pyqtgraph_2d.py   # 20 dataset 2D demos
+python demo_pyqtgraph_3d.py   # 10 3D projection demos
 ```
 
-所有输出保存在 `demo/output/` 目录，包含 PNG 和 SVG 格式。
+All outputs are saved to `demo/output/` in both PNG and SVG formats.
