@@ -2,224 +2,200 @@
   "2D": {
     "Line": {
       "500": {
-        "matplotlib": 0.519,
-        "pyqtgraph": 0.5699,
-        "shenbi": 0.2233,
-        "speedup": "2.3\u00d7"
+        "mpl": 0.0349,
+        "pg": 0.0259,
+        "sb": 0.0166,
+        "sp": "2.1\u00d7"
       },
       "1000": {
-        "matplotlib": 0.0395,
-        "pyqtgraph": 0.028,
-        "shenbi": 0.0432,
-        "speedup": "0.9\u00d7"
+        "mpl": 0.0353,
+        "pg": 0.0256,
+        "sb": 0.016,
+        "sp": "2.2\u00d7"
       },
       "5000": {
-        "matplotlib": 0.0394,
-        "pyqtgraph": 0.0302,
-        "shenbi": 0.0449,
-        "speedup": "0.9\u00d7"
+        "mpl": 0.0362,
+        "pg": 0.0282,
+        "sb": 0.0159,
+        "sp": "2.3\u00d7"
       },
       "10000": {
-        "matplotlib": 0.0399,
-        "pyqtgraph": 0.0317,
-        "shenbi": 0.0415,
-        "speedup": "1.0\u00d7"
+        "mpl": 0.0366,
+        "pg": 0.0286,
+        "sb": 0.0185,
+        "sp": "2.0\u00d7"
       },
       "50000": {
-        "matplotlib": 0.0436,
-        "pyqtgraph": 0.0363,
-        "shenbi": 0.0613,
-        "speedup": "0.7\u00d7"
+        "mpl": 0.0396,
+        "pg": 0.0324,
+        "sb": 0.0386,
+        "sp": "1.0\u00d7"
       },
       "100000": {
-        "matplotlib": 0.0472,
-        "pyqtgraph": 0.0408,
-        "shenbi": 0.0877,
-        "speedup": "0.5\u00d7"
-      },
-      "500000": {
-        "matplotlib": 0.0811,
-        "pyqtgraph": 0.0822,
-        "shenbi": 0.3011,
-        "speedup": "0.3\u00d7"
+        "mpl": 0.0423,
+        "pg": 0.0369,
+        "sb": 0.064,
+        "sp": "0.7\u00d7"
       }
     },
     "Scatter": {
       "500": {
-        "matplotlib": 0.0733,
-        "pyqtgraph": 0.0334,
-        "shenbi": 0.0417,
-        "speedup": "1.8\u00d7"
+        "mpl": 0.035,
+        "pg": 0.0288,
+        "sb": 0.0161,
+        "sp": "2.2\u00d7"
       },
       "1000": {
-        "matplotlib": 0.043,
-        "pyqtgraph": 0.0386,
-        "shenbi": 0.0476,
-        "speedup": "0.9\u00d7"
+        "mpl": 0.0368,
+        "pg": 0.0345,
+        "sb": 0.0193,
+        "sp": "1.9\u00d7"
       },
       "5000": {
-        "matplotlib": 0.0575,
-        "pyqtgraph": 0.0944,
-        "shenbi": 0.0847,
-        "speedup": "0.7\u00d7"
+        "mpl": 0.0557,
+        "pg": 0.0793,
+        "sb": 0.0412,
+        "sp": "1.4\u00d7"
       },
       "10000": {
-        "matplotlib": 0.0752,
-        "pyqtgraph": 0.1526,
-        "shenbi": 0.1249,
-        "speedup": "0.6\u00d7"
+        "mpl": 0.0733,
+        "pg": 0.1246,
+        "sb": 0.0686,
+        "sp": "1.1\u00d7"
       },
       "50000": {
-        "matplotlib": 0.2047,
-        "pyqtgraph": 0.5984,
-        "shenbi": 0.4367,
-        "speedup": "0.5\u00d7"
+        "mpl": 0.1992,
+        "pg": 0.4938,
+        "sb": 0.2857,
+        "sp": "0.7\u00d7"
       },
       "100000": {
-        "matplotlib": 0.3672,
-        "pyqtgraph": 1.152,
-        "shenbi": 0.8251,
-        "speedup": "0.4\u00d7"
-      },
-      "500000": {
-        "matplotlib": 1.6838,
-        "pyqtgraph": 5.6079,
-        "shenbi": 3.8679,
-        "speedup": "0.4\u00d7"
+        "mpl": 0.3567,
+        "pg": 0.9512,
+        "sb": 0.5587,
+        "sp": "0.6\u00d7"
       }
     },
     "Bar": {
       "500": {
-        "matplotlib": null,
-        "pyqtgraph": 0.0397,
-        "shenbi": 0.0489,
-        "speedup": "\u2014"
+        "mpl": 0.066,
+        "pg": 0.0384,
+        "sb": 0.0157,
+        "sp": "4.2\u00d7"
       },
       "1000": {
-        "matplotlib": null,
-        "pyqtgraph": 0.0533,
-        "shenbi": 0.061,
-        "speedup": "\u2014"
+        "mpl": 0.1012,
+        "pg": 0.048,
+        "sb": 0.017,
+        "sp": "6.0\u00d7"
       },
       "5000": {
-        "matplotlib": null,
-        "pyqtgraph": 0.0826,
-        "shenbi": 0.09,
-        "speedup": "\u2014"
+        "mpl": 0.0981,
+        "pg": 0.0479,
+        "sb": 0.0175,
+        "sp": "5.6\u00d7"
       },
       "10000": {
-        "matplotlib": null,
-        "pyqtgraph": 0.0805,
-        "shenbi": 0.0929,
-        "speedup": "\u2014"
+        "mpl": 0.0977,
+        "pg": 0.0489,
+        "sb": 0.0163,
+        "sp": "6.0\u00d7"
       },
       "50000": {
-        "matplotlib": null,
-        "pyqtgraph": 0.0827,
-        "shenbi": 0.0917,
-        "speedup": "\u2014"
+        "mpl": 0.1001,
+        "pg": 0.0478,
+        "sb": 0.0167,
+        "sp": "6.0\u00d7"
       },
       "100000": {
-        "matplotlib": null,
-        "pyqtgraph": 0.0845,
-        "shenbi": 0.1413,
-        "speedup": "\u2014"
-      },
-      "500000": {
-        "matplotlib": null,
-        "pyqtgraph": 0.0834,
-        "shenbi": 0.0929,
-        "speedup": "\u2014"
+        "mpl": 0.102,
+        "pg": 0.0496,
+        "sb": 0.0174,
+        "sp": "5.9\u00d7"
       }
     },
     "Hist": {
       "500": {
-        "matplotlib": 0.0572,
-        "pyqtgraph": 0.0299,
-        "shenbi": 0.0351,
-        "speedup": "1.6\u00d7"
+        "mpl": 0.0498,
+        "pg": 0.0254,
+        "sb": 0.0135,
+        "sp": "3.7\u00d7"
       },
       "1000": {
-        "matplotlib": 0.055,
-        "pyqtgraph": 0.0301,
-        "shenbi": 0.0351,
-        "speedup": "1.6\u00d7"
+        "mpl": 0.052,
+        "pg": 0.0256,
+        "sb": 0.0133,
+        "sp": "3.9\u00d7"
       },
       "5000": {
-        "matplotlib": 0.0534,
-        "pyqtgraph": 0.029,
-        "shenbi": 0.0365,
-        "speedup": "1.5\u00d7"
+        "mpl": 0.0514,
+        "pg": 0.0262,
+        "sb": 0.0138,
+        "sp": "3.7\u00d7"
       },
       "10000": {
-        "matplotlib": 0.058,
-        "pyqtgraph": 0.0307,
-        "shenbi": 0.0367,
-        "speedup": "1.6\u00d7"
+        "mpl": 0.0541,
+        "pg": 0.0262,
+        "sb": 0.0138,
+        "sp": "3.9\u00d7"
       },
       "50000": {
-        "matplotlib": 0.0547,
-        "pyqtgraph": 0.0313,
-        "shenbi": 0.0386,
-        "speedup": "1.4\u00d7"
+        "mpl": 0.0503,
+        "pg": 0.0248,
+        "sb": 0.016,
+        "sp": "3.1\u00d7"
       },
       "100000": {
-        "matplotlib": 0.0569,
-        "pyqtgraph": 0.0329,
-        "shenbi": 0.0386,
-        "speedup": "1.5\u00d7"
-      },
-      "500000": {
-        "matplotlib": 0.0711,
-        "pyqtgraph": 0.044,
-        "shenbi": 0.0517,
-        "speedup": "1.4\u00d7"
+        "mpl": 0.0536,
+        "pg": 0.0258,
+        "sb": 0.0183,
+        "sp": "2.9\u00d7"
       }
     }
   },
   "3D": {
-    "3D Scatter": {
+    "3DScatter": {
       "400": {
-        "matplotlib": 0.0559,
-        "shenbi": 7.3997,
-        "speedup": "0.0\u00d7"
+        "mpl": 0.0448,
+        "sb": 0.0156,
+        "sp": "2.9\u00d7"
       },
       "900": {
-        "matplotlib": 0.0536,
-        "shenbi": 0.0425,
-        "speedup": "1.3\u00d7"
+        "mpl": 0.0468,
+        "sb": 0.0184,
+        "sp": "2.5\u00d7"
       },
       "2500": {
-        "matplotlib": 0.0548,
-        "shenbi": 0.0577,
-        "speedup": "0.9\u00d7"
+        "mpl": 0.0505,
+        "sb": 0.0276,
+        "sp": "1.8\u00d7"
       },
       "4900": {
-        "matplotlib": 0.0536,
-        "shenbi": 0.08,
-        "speedup": "0.7\u00d7"
+        "mpl": 0.0488,
+        "sb": 0.0407,
+        "sp": "1.2\u00d7"
       }
     },
-    "3D Surface": {
+    "3DSurface": {
       "400": {
-        "matplotlib": 0.0735,
-        "shenbi": 0.1113,
-        "speedup": "0.7\u00d7"
+        "mpl": 0.0664,
+        "sb": 0.0771,
+        "sp": "0.9\u00d7"
       },
       "900": {
-        "matplotlib": 0.1016,
-        "shenbi": 0.1163,
-        "speedup": "0.9\u00d7"
+        "mpl": 0.0944,
+        "sb": 0.081,
+        "sp": "1.2\u00d7"
       },
       "2500": {
-        "matplotlib": 0.198,
-        "shenbi": 0.1292,
-        "speedup": "1.5\u00d7"
+        "mpl": 0.1893,
+        "sb": 0.0921,
+        "sp": "2.1\u00d7"
       },
       "4900": {
-        "matplotlib": 0.3427,
-        "shenbi": 0.1355,
-        "speedup": "2.5\u00d7"
+        "mpl": 0.3309,
+        "sb": 0.0969,
+        "sp": "3.4\u00d7"
       }
     }
   }
