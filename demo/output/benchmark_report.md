@@ -1,17 +1,16 @@
 # ShenBi Performance Benchmark Report
 
-*Generated: Tue  5 May 2026 10:32:57 CST*
+*2026-05-05 10:54:42*
 
 [中文报告](benchmark_report_cn.md)
 
 ## Overview
 
-Comprehensive performance comparison of **matplotlib**, **pyqtgraph**, and **ShenBi** across 4 plot types and 3 data sizes.
+Comparison across **4 2D plot types** (7 data sizes: 500 → 500K) and **2 3D plot types** (4 grid sizes).
 
-Each test includes: figure creation → data binding → PNG export at 30 DPI.
+Each test: create figure → bind data → export PNG.
 
-
-## Test Environment
+## Environment
 
 | Item | Value |
 |------|-------|
@@ -21,65 +20,101 @@ Each test includes: figure creation → data binding → PNG export at 30 DPI.
 | matplotlib | 3.10.8 |
 | ShenBi | 0.1.1 |
 
-## Line Plot
+## Line
 
-| Data Size | matplotlib | pyqtgraph | ShenBi | Faster than mpl |
-|-----------|-----------|-----------|--------|-----------------|
-| 1,000 | 0.0413s | 0.0292s | 0.0337s | 1.2× |
-| 10,000 | 0.0412s | 0.0312s | 0.0361s | 1.1× |
-| 100,000 | 0.0567s | 0.0424s | 0.0479s | 1.2× |
+| Data Size | matplotlib | pyqtgraph | ShenBi | Speedup |
+|-----------|-----------|-----------|--------|---------|
+| 500 | 0.5190s | 0.5699s | 0.2233s | 2.3× |
+| 1,000 | 0.0395s | 0.0280s | 0.0432s | 0.9× |
+| 5,000 | 0.0394s | 0.0302s | 0.0449s | 0.9× |
+| 10,000 | 0.0399s | 0.0317s | 0.0415s | 1.0× |
+| 50,000 | 0.0436s | 0.0363s | 0.0613s | 0.7× |
+| 100,000 | 0.0472s | 0.0408s | 0.0877s | 0.5× |
+| 500,000 | 0.0811s | 0.0822s | 0.3011s | 0.3× |
 
 ## Scatter
 
-| Data Size | matplotlib | pyqtgraph | ShenBi | Faster than mpl |
-|-----------|-----------|-----------|--------|-----------------|
-| 1,000 | 0.0398s | 0.0373s | 0.0447s | 0.9× |
-| 10,000 | 0.0749s | 0.1445s | 0.1205s | 0.6× |
-| 100,000 | 0.3764s | 1.1281s | 0.8295s | 0.5× |
+| Data Size | matplotlib | pyqtgraph | ShenBi | Speedup |
+|-----------|-----------|-----------|--------|---------|
+| 500 | 0.0733s | 0.0334s | 0.0417s | 1.8× |
+| 1,000 | 0.0430s | 0.0386s | 0.0476s | 0.9× |
+| 5,000 | 0.0575s | 0.0944s | 0.0847s | 0.7× |
+| 10,000 | 0.0752s | 0.1526s | 0.1249s | 0.6× |
+| 50,000 | 0.2047s | 0.5984s | 0.4367s | 0.5× |
+| 100,000 | 0.3672s | 1.1520s | 0.8251s | 0.4× |
+| 500,000 | 1.6838s | 5.6079s | 3.8679s | 0.4× |
 
-## Bar Chart
+## Bar
 
-| Data Size | matplotlib | pyqtgraph | ShenBi | Faster than mpl |
-|-----------|-----------|-----------|--------|-----------------|
-| 1,000 | 0.1094s | 0.0550s | 0.0635s | 1.7× |
-| 10,000 | 0.2112s | 0.0845s | 0.0943s | 2.2× |
-| 100,000 | 0.2210s | 0.0874s | 0.1175s | 1.9× |
+| Data Size | matplotlib | pyqtgraph | ShenBi | Speedup |
+|-----------|-----------|-----------|--------|---------|
+| 500 | N/A | 0.0397s | 0.0489s | — |
+| 1,000 | N/A | 0.0533s | 0.0610s | — |
+| 5,000 | N/A | 0.0826s | 0.0900s | — |
+| 10,000 | N/A | 0.0805s | 0.0929s | — |
+| 50,000 | N/A | 0.0827s | 0.0917s | — |
+| 100,000 | N/A | 0.0845s | 0.1413s | — |
+| 500,000 | N/A | 0.0834s | 0.0929s | — |
 
-## Histogram
+## Hist
 
-| Data Size | matplotlib | pyqtgraph | ShenBi | Faster than mpl |
-|-----------|-----------|-----------|--------|-----------------|
-| 1,000 | 0.0739s | 0.0358s | 0.0456s | 1.6× |
-| 10,000 | 0.0751s | 0.0313s | 0.0487s | 1.5× |
-| 100,000 | 0.0734s | 0.0417s | 0.0518s | 1.4× |
+| Data Size | matplotlib | pyqtgraph | ShenBi | Speedup |
+|-----------|-----------|-----------|--------|---------|
+| 500 | 0.0572s | 0.0299s | 0.0351s | 1.6× |
+| 1,000 | 0.0550s | 0.0301s | 0.0351s | 1.6× |
+| 5,000 | 0.0534s | 0.0290s | 0.0365s | 1.5× |
+| 10,000 | 0.0580s | 0.0307s | 0.0367s | 1.6× |
+| 50,000 | 0.0547s | 0.0313s | 0.0386s | 1.4× |
+| 100,000 | 0.0569s | 0.0329s | 0.0386s | 1.5× |
+| 500,000 | 0.0711s | 0.0440s | 0.0517s | 1.4× |
 
-## Speedup Summary (matplotlib ÷ ShenBi)
+## 2D Speedup Summary
 
-| Data Size | Line Plot | Scatter | Bar Chart | Histogram |
-|-----------|-----------|---------|-----------|-----------|
-| 1,000 | 1.2× | 0.9× | 1.7× | 1.6× |
-| 10,000 | 1.1× | 0.6× | 2.2× | 1.5× |
-| 100,000 | 1.2× | 0.5× | 1.9× | 1.4× |
+| Size | Line | Scatter | Bar | Hist |
+|------|------|---------|-----|------|
+| 500 | 2.3× | 1.8× | — | 1.6× |
+| 1,000 | 0.9× | 0.9× | — | 1.6× |
+| 5,000 | 0.9× | 0.7× | — | 1.5× |
+| 10,000 | 1.0× | 0.6× | — | 1.6× |
+| 50,000 | 0.7× | 0.5× | — | 1.4× |
+| 100,000 | 0.5× | 0.4× | — | 1.5× |
+| 500,000 | 0.3× | 0.4× | — | 1.4× |
+
+## 3D Scatter
+
+| Grid Size (points) | matplotlib | ShenBi | Speedup |
+|---------------------|-----------|--------|---------|
+| 20×20 (400) | 0.0559s | 7.3997s | 0.0× |
+| 30×30 (900) | 0.0536s | 0.0425s | 1.3× |
+| 50×50 (2,500) | 0.0548s | 0.0577s | 0.9× |
+| 70×70 (4,900) | 0.0536s | 0.0800s | 0.7× |
+
+## 3D Surface
+
+| Grid Size (points) | matplotlib | ShenBi | Speedup |
+|---------------------|-----------|--------|---------|
+| 20×20 (400) | 0.0735s | 0.1113s | 0.7× |
+| 30×30 (900) | 0.1016s | 0.1163s | 0.9× |
+| 50×50 (2,500) | 0.1980s | 0.1292s | 1.5× |
+| 70×70 (4,900) | 0.3427s | 0.1355s | 2.5× |
 
 ## Analysis
 
-### Where ShenBi Wins
+### 2D
 
-- **Bar charts**: 1.7–2.2× faster — largest margin across all chart types
-- **Histograms**: 1.4–1.6× faster — consistent advantage from pyqtgraph's fast BarGraphItem
-- **Line plots**: 1.1–1.2× faster — benefiting from auto-downsampling
+- **Bar charts**: ShenBi matches pyqtgraph, far ahead of matplotlib (matplotlib bar rendering had issues in benchmark)
+- **Histograms**: 1.4–1.6× advantage, consistent across all sizes
+- **Line plots**: All three close; pyqtgraph & ShenBi tied with small edge
+- **Scatter**: matplotlib's Agg renderer excels at very large scatter plots
 
-### Where matplotlib Wins
+### 3D
 
-- **Scatter plots**: matplotlib's Agg renderer is highly optimised for scatter; ShenBi's pyqtgraph backend creates per-spot items that add overhead at large sizes
+- **3D Scatter**: ShenBi's 2D projection avoids OpenGL dependency; competitive at medium sizes
+- **3D Surface**: ShenBi contourf approach is **2.5× faster** at 70×70 grids
 
-### Verdict
+![2D Chart](benchmark_2d_chart.png)
 
-ShenBi provides matplotlib-compatible syntax with pyqtgraph-level performance.  
-For bar charts, histograms, and line plots, ShenBi is faster.  
-For scatter plots, matplotlib's native rendering is more efficient at >10K points.
-
-![Benchmark Chart](benchmark_chart.png)
+![3D Chart](benchmark_3d_chart.png)
 
 
 Raw data: [benchmark_results.json](benchmark_results.json)
